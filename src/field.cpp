@@ -5,7 +5,9 @@ Field::Field(std::string tilesetImg,
              int tileSize,
              size_t width, 
              size_t height)
-            : tileMap(tileMap), width(width), height(height) 
+: tileMap(tileMap),
+  width(width), 
+  height(height) 
 {
   sf::Sprite tileSprite;
   int tileType;
@@ -15,51 +17,24 @@ Field::Field(std::string tilesetImg,
   // Loading set of tiles from file
   tileset.loadFromFile(tilesetImg);
 
-  // Memory allocation
-  tiles = new Tile*[width];
-  for (size_t x = 0; x < width; x++)
-    tiles[x] = new Tile[height];
-  
-  //! Generating field pattern if it wasn't premade
-  /*
-  if (!tileMap) {
-    int entrance, exit;
-
-    std::srand(std::time(nullptr));
-
-    entrance = std::rand() % width*height;
-    exit = std::rand() % width*height + (width*height/2);
-
-    gTileMap = new int[width*height];
-    for (size_t i = 0; i < width*height; i++) {
-      gTileMap[i] = GROUND;
-      if ((i % width) == 0  ||
-          (i % width) + 1 == 0 ||
-          (i < height) ||
-          (i > width*height - height)) {
-        gTileMap[i] = WALL;
-      }
-      if (i == entrance) gTileMap[i] = ENTRANCE;
-      if (i == exit) gTileMap[i] = EXIT;
-    }
-  }
-  */
 
   // Tile sprites initialisation
+  tiles = new Tile*[width];
+
   for (size_t x = 0; x < width; x++) {
+    tiles[x] = new Tile[height];
+
     for (size_t y = 0; y < height; y++) {
       tileSprite.setTexture(tileset);
-      tileType = tileMap ? tileMap[x + y*width] : gTileMap[x + y*width];
+      tileType = tileMap[x + y*width];
 
       tileSprite.setTextureRect(sf::IntRect(tileSize*(tileType%2), 
                                             tileSize*(tileType/2), 
-                                            tileSize, 
-                                            tileSize));
-      
+                                            tileSize, tileSize));
       tileSprite.setPosition(sf::Vector2f(x*tileSize, y*tileSize));
 
       passable = (tileType == WALL);
-      tiles[x][y].init(tileSprite, passable);
+      tiles[x][y].init(tileSprite, tileMap[x + y*width], passable);
     }
   }
 }
@@ -71,12 +46,73 @@ Field::~Field()
   delete [] tiles;
 }
 
+Field::Field(const Field& other)
+: tileMap(other.tileMap),
+  tileset(other.tileset), 
+  width(other.width), 
+  height(other.height) 
+{
+  tiles = new Tile*[width];
+  for (size_t x = 0; x < width; x++) {
+    tiles[x] = new Tile[height];
+    for (size_t y = 0; y < height; y++) {
+      tiles[x][y] = other.tiles[x][y];
+    }
+  }
+}
+
+Field& Field::operator=(const Field& other)
+{
+  for (int x = 0; x < width; x++)
+    delete [] tiles[x];
+  delete [] tiles;
+
+  tileMap = other.tileMap;
+  tileset = other.tileset;
+  width   = other.width;
+  height  = other.height;
+
+  tiles = new Tile*[width];
+  for (size_t x = 0; x < width; x++) {
+    tiles[x] = new Tile[height];
+    for (size_t y = 0; y < height; y++) {
+      tiles[x][y] = other.tiles[x][y];
+    }
+  }
+  return *this;
+}
+
+Field::Field(Field&& other)
+: tileMap(other.tileMap),
+  tileset(other.tileset), 
+  width(other.width), 
+  height(other.height),
+  tiles(other.tiles)
+{
+  other.tiles = nullptr;
+}
+
+Field& Field::operator=(Field&& other)
+{
+  for (int x = 0; x < width; x++)
+    delete [] tiles[x];
+  delete [] tiles;
+  tileMap = other.tileMap;
+  tileset = other.tileset;
+  width   = other.width;
+  height  = other.height;
+  tiles   = other.tiles;
+  return *this;
+}
+
 void Field::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
   states.transform *= getTransform();
   states.texture = &tileset;
 
-  for (size_t x = 0; x < width; x++)
-    for (size_t y = 0; y < height; y++)
+  for (size_t x = 0; x < width; x++) {
+    for (size_t y = 0; y < height; y++) {
       target.draw(tiles[x][y].getSprite(), states);
+    }
+  }
 }

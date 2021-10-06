@@ -6,7 +6,7 @@
 class ITile
 {
 public:
-  void virtual init(sf::Sprite sprite, bool passable) = 0;
+  void virtual init(sf::Sprite sprite, int type, bool passable) = 0;
   bool virtual isPassable() = 0;
 };
 

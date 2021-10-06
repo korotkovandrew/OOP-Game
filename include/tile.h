@@ -10,8 +10,14 @@ class Tile : public ITile
 public:
   Tile();
   ~Tile();
+
+  Tile(const Tile& other);
+  Tile& operator=(const Tile& other);
+
+  Tile(Tile&& other);
+  Tile& operator=(Tile&& other);
   
-  void init(sf::Sprite sprite, bool passable);
+  void init(sf::Sprite sprite, int type, bool passable) override;
 
   bool isPassable();
 

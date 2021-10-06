@@ -15,7 +15,20 @@ public:
         int tileSize,
         size_t width, 
         size_t height);
+
   ~Field();
+
+  // Copy constructor 
+  Field(const Field& other);
+
+  // Copy operator
+  Field& operator=(const Field& other);
+
+  // Move constructor
+  Field(Field&& other);
+
+  // Move operator
+  Field& operator=(Field&& other);
 
   // Draws field's cells in target 
   void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
