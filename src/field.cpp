@@ -1,5 +1,7 @@
 #include "../include/field.h"
 
+// Constructors & Destructor
+
 Field::Field(std::string tilesetImg,
              const int* tileMap, 
              int tileSize,
@@ -11,7 +13,6 @@ Field::Field(std::string tilesetImg,
 {
   sf::Sprite tileSprite;
   int tileType;
-  int* gTileMap;
   bool passable;
 
   // Loading set of tiles from file
@@ -34,7 +35,7 @@ Field::Field(std::string tilesetImg,
       tileSprite.setPosition(sf::Vector2f(x*tileSize, y*tileSize));
 
       passable = (tileType == WALL);
-      tiles[x][y].init(tileSprite, tileMap[x + y*width], passable);
+      tiles[x][y] = Tile(tileSprite, tileMap[x + y*width], passable);
     }
   }
 }
@@ -89,21 +90,28 @@ Field::Field(Field&& other)
   height(other.height),
   tiles(other.tiles)
 {
+  if (&other == this) return;
   other.tiles = nullptr;
 }
 
 Field& Field::operator=(Field&& other)
 {
+  if (&other != this) return *this;
+
   for (int x = 0; x < width; x++)
     delete [] tiles[x];
   delete [] tiles;
+
   tileMap = other.tileMap;
   tileset = other.tileset;
   width   = other.width;
   height  = other.height;
   tiles   = other.tiles;
+
   return *this;
 }
+
+// Public Functions
 
 void Field::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {

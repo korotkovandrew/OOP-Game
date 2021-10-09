@@ -6,8 +6,8 @@
 class ITile
 {
 public:
-  void virtual init(sf::Sprite sprite, int type, bool passable) = 0;
   bool virtual isPassable() = 0;
+  bool virtual isEmpty() = 0;
 };
 
 #endif // !ITILE_H

@@ -5,7 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include "tile.h"
 
-enum Tiles {WALL, GROUND, ENTRANCE, EXIT};
+enum {WALL, GROUND, ENTRANCE, EXIT};
 
 class Field : public sf::Drawable, sf::Transformable
 {
@@ -35,9 +35,9 @@ public:
 
 private:
   Tile** tiles;
-  sf::Texture tileset;
-
   const int* tileMap;
+
+  sf::Texture tileset;
   size_t width;
   size_t height;
 };

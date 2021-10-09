@@ -27,10 +27,9 @@ Game::Game()
                     TILE_SIZE,
                     FIELD_WIDTH, 
                     FIELD_HEIGHT);
-  /*
+
   window->setSize(sf::Vector2u(3u * FIELD_WIDTH * TILE_SIZE, 
                                3u * FIELD_HEIGHT * TILE_SIZE));
-  */
 }
 
 Game::~Game()
