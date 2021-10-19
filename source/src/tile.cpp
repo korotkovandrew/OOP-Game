@@ -1,35 +1,36 @@
 #include "../include/tile.h"
 
-// Constructors & Destructor
+/* Constructors and Destructors */
+Tile::Tile(unsigned short type) : type(type), entity(nullptr) 
+{
+    if (type >= NUMBER_OF_TYPES) 
+        throw std::invalid_argument("Wrong Tile Type");
+}
 
-Tile::Tile() {}
-
-Tile::Tile(sf::Sprite sprite, int type, bool passable)
-    : entity(nullptr),
-      sprite(sprite),
-      passable(passable),
-      type(type) {}
-
-Tile::~Tile() {}
-
-Tile::Tile(const Tile &other)
-    : entity(nullptr),
-      sprite(other.sprite),
-      passable(other.passable),
-      type(other.type) {}
+Tile::~Tile()
+{
+    if (this->entity) delete this->entity;
+}
 
 Tile &Tile::operator=(const Tile &other)
 {
-    sprite = other.sprite;
-    passable = other.passable;
-    type = other.type;
-    return *this;
+    this->type = other.type;
+    // entity = new IEntity(other.entity);
+    this->entity = other.entity;
 }
 
-// Public Functions
+/* Public Functions */
+bool Tile::isEmpty() const
+{
+    return this->entity != nullptr;
+}
 
-bool Tile::isPassable() { return passable; }
+bool Tile::isPassable() const
+{
+    return this->type != WALL;
+}
 
-bool Tile::isEmpty() { return entity != nullptr; }
-
-sf::Sprite &Tile::getSprite() { return sprite; }
+unsigned short Tile::getType() const
+{
+    return this->type;
+}

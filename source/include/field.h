@@ -1,49 +1,34 @@
 #ifndef FIELD_H
 #define FIELD_H
 
-#include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+
+#include <cstddef>
+
 #include "tile.h"
 
-enum {WALL, GROUND, ENTRANCE, EXIT};
-
-class Field : public sf::Drawable, sf::Transformable
+class Field
 {
 public:
-  Field(std::string tilesetImg,
-        const int* tileMap, 
-        int tileSize,
-        size_t width, 
-        size_t height);
+    Field(const unsigned short* sample, size_t width, size_t height);
+    ~Field();
 
-  ~Field();
+    Field(const Field &);
+    Field& operator=(const Field &);
+    Field(Field &&);
+    Field& operator=(Field &&);
 
-  // Copy constructor 
-  Field(const Field& other);
-
-  // Copy operator
-  Field& operator=(const Field& other);
-
-  // Move constructor
-  Field(Field&& other);
-
-  // Move operator
-  Field& operator=(Field&& other);
-
-  // Draws field's cells in target 
-  void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-
-  // Getters 
-  Tile& getTile(size_t x, size_t y);
+    size_t getWidth() const;
+    size_t getHeight() const;
+    const Tile& getTile(size_t x, size_t y) const;
 
 private:
-  Tile** tiles;
-  const int* tileMap;
+    Tile **tiles;
 
-  sf::Texture tileset;
-  size_t width;
-  size_t height;
+    size_t width;
+    size_t height;
 };
 
-
-#endif // !FIELD_H
+#endif // FIELD_H

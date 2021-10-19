@@ -1,33 +1,29 @@
 #ifndef TILE_H
 #define TILE_H
 
-#include "itile.h"
+#include <stdexcept> 
 
-#include <SFML/Graphics.hpp>
+#include "entity.h"
 
-class Tile : public ITile
+enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
+
+class Tile
 {
 public:
-  Tile();
-  Tile(sf::Sprite sprite, int type, bool passable);
-  ~Tile();
+    Tile() = default;
+    Tile(unsigned short type);
+    ~Tile();
 
-  Tile(const Tile& other);
-  Tile& operator=(const Tile& other);
+    Tile& operator=(const Tile&);
+    
+    bool isEmpty() const;
+    bool isPassable() const;
 
-  bool isPassable(); 
-  bool isEmpty(); 
-
-  sf::Sprite& getSprite();
+    unsigned short getType() const;
 
 private:
-  sf::Sprite sprite;
-
-  // NOT VOID but entity base class
-  void *entity;
-  
-  bool passable;
-  int type;
+    Entity *entity;
+    unsigned short type;
 };
 
-#endif // !TILE_H
+#endif // TILE_H

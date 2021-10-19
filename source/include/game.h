@@ -1,31 +1,40 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <string>
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
 
 #include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Window.hpp>
 
+#include "../settings/config.h"
 #include "field.h"
+#include "field_painter.h"
+#include "sample.h"
 
 class Game
 {
 public:
-  Game();
-  ~Game();
+    Game();
+    ~Game();
 
-  void run();
+    void run();
 
 private:
-  void updateEvents();
-  void updateLogic();
-  void render();
+    void updateEvents();
+    void updateLogic();
+    void render();
 
-  sf::RenderWindow* window;
-  sf::Event event;
+    FieldSample* loadSamplesFromFile(std::string fileName, size_t& n);
 
-  Field *field;
+    sf::RenderWindow* window;
+    sf::Event ev;
+
+    FieldPainter* fieldPainter;
+    Field* field;
 };
 
-#endif // !GAME_H
+#endif // GAME_H
