@@ -1,4 +1,4 @@
-#include "../include/drawer.h"
+#include "drawer.h"
 
 /* Constructors and Destructors */
 Drawer::Drawer(Field *window)

@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 
-#include "entity.h"
+#include "../Interfaces/i_entity.h"
 #include "tile_type_enum.h"
 
 class Tile

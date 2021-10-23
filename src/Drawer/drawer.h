@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "field.h"
+#include "../Field/field.h"
 
 class Drawer : public sf::Drawable, public sf::Transformable
 {

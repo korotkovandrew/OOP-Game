@@ -10,10 +10,10 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-#include "../settings/config.h"
-#include "field.h"
-#include "drawer.h"
-#include "sample.h"
+#include "../../settings/config.h"
+#include "../Field/field.h"
+#include "../Drawer/drawer.h"
+#include "../Structs/sample.h"
 
 class Game
 {

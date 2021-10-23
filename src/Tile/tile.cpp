@@ -1,4 +1,4 @@
-#include "../include/tile.h"
+#include "tile.h"
 
 /* Constructors and Destructors */
 Tile::Tile(unsigned short type) : type(type), entity(nullptr) 
