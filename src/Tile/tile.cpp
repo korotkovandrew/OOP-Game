@@ -34,3 +34,8 @@ unsigned short Tile::getType() const
 {
     return this->type;
 }
+
+const IEntity& Tile::getEntity() const
+{
+    return *(this->entity);
+}

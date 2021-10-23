@@ -1,12 +1,10 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-class Entity 
+class IEntity 
 {
 public:
-    virtual ~Entity() = 0;
-
-    virtual Entity& operator=(const Entity&);
+    virtual ~IEntity() = 0;
 };
 
 #endif // ENTITY_H

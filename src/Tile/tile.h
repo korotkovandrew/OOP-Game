@@ -19,9 +19,10 @@ public:
     bool isPassable() const;
 
     unsigned short getType() const;
+    const IEntity& getEntity() const;
 
 private:
-    Entity *entity;
+    IEntity *entity;
     unsigned short type;
 };
 
