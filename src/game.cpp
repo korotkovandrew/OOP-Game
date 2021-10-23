@@ -15,8 +15,8 @@ Game::Game()
                       samples[sampleNumber].width,
                       samples[sampleNumber].height);
 
-    fieldPainter = new FieldPainter(field);
-    fieldPainter->loadFromFile(SAMPLE_PATH, tileSize);
+    drawer = new Drawer(field);
+    drawer->loadFromFile(TILESET_PATH, tileSize);
 
     window = new sf::RenderWindow(sf::VideoMode(samples[sampleNumber].width * tileSize.x,
                                                 samples[sampleNumber].height * tileSize.y),
@@ -30,7 +30,7 @@ Game::Game()
 Game::~Game()
 {
     delete field;
-    delete fieldPainter;
+    delete drawer;
     delete window;
 }
 
@@ -85,7 +85,7 @@ void Game::render()
 {
     this->window->clear(sf::Color(50, 50, 50));
 
-    this->window->draw(*fieldPainter);
+    this->window->draw(*drawer);
 
     this->window->display();
 }

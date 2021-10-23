@@ -5,10 +5,10 @@
 
 #include "field.h"
 
-class FieldPainter : public sf::Drawable, public sf::Transformable
+class Drawer : public sf::Drawable, public sf::Transformable
 {
 public:
-    FieldPainter(Field *);
+    Drawer(Field *);
 
     void loadFromFile(const char* tileset, sf::Vector2u tileSize);
 

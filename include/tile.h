@@ -1,11 +1,10 @@
 #ifndef TILE_H
 #define TILE_H
 
-#include <stdexcept> 
+#include <stdexcept>
 
 #include "entity.h"
-
-enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
+#include "tile_type_enum.h"
 
 class Tile
 {

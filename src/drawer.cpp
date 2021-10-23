@@ -1,11 +1,11 @@
-#include "../include/field_painter.h"
+#include "../include/drawer.h"
 
 /* Constructors and Destructors */
-FieldPainter::FieldPainter(Field *window)
+Drawer::Drawer(Field *window)
     : target(window) { }
 
 /* Public Functions */
-void FieldPainter::loadFromFile(const char* tileset, sf::Vector2u tileSize)
+void Drawer::loadFromFile(const char* tileset, sf::Vector2u tileSize)
 {
     if (!m_tileset.loadFromFile(tileset)) 
         throw std::runtime_error("Error: Read Tileset File");
@@ -39,7 +39,7 @@ void FieldPainter::loadFromFile(const char* tileset, sf::Vector2u tileSize)
 }
 
 /* Private Functions */
-void FieldPainter::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void Drawer::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     states.transform *= getTransform();
 

@@ -8,7 +8,7 @@ set (
     ./src/main.cpp
     ./src/game.cpp
     ./src/field.cpp
-    ./src/field_painter.cpp
+    ./src/drawer.cpp
     ./src/tile.cpp
 )
 
@@ -18,7 +18,7 @@ set (
     ./include/field.h
     ./include/tile.h
     ./include/entity.h
-    ./include/field_painter.h
+    ./include/drawer.h
     ./settings/config.h
 )
 

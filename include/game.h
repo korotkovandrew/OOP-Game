@@ -12,7 +12,7 @@
 
 #include "../settings/config.h"
 #include "field.h"
-#include "field_painter.h"
+#include "drawer.h"
 #include "sample.h"
 
 class Game
@@ -33,7 +33,7 @@ private:
     sf::RenderWindow* window;
     sf::Event ev;
 
-    FieldPainter* fieldPainter;
+    Drawer* drawer;
     Field* field;
 };
 
