@@ -4,7 +4,8 @@
 #include <stdexcept>
 
 #include "../Interfaces/i_entity.h"
-#include "tile_type_enum.h"
+
+enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
 
 class Tile
 {
