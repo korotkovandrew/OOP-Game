@@ -1,4 +1,4 @@
-#include "../include/tile.h"
+#include "tile.h"
 
 /* Constructors and Destructors */
 Tile::Tile(unsigned short type) : type(type), entity(nullptr) 
@@ -33,4 +33,9 @@ bool Tile::isPassable() const
 unsigned short Tile::getType() const
 {
     return this->type;
+}
+
+const IEntity& Tile::getEntity() const
+{
+    return *(this->entity);
 }

@@ -1,11 +1,10 @@
 #ifndef TILE_H
 #define TILE_H
 
-#include <stdexcept> 
+#include <stdexcept>
 
-#include "entity.h"
-
-enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
+#include "../Interfaces/i_entity.h"
+#include "tile_type_enum.h"
 
 class Tile
 {
@@ -20,9 +19,10 @@ public:
     bool isPassable() const;
 
     unsigned short getType() const;
+    const IEntity& getEntity() const;
 
 private:
-    Entity *entity;
+    IEntity *entity;
     unsigned short type;
 };
 

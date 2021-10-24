@@ -1,13 +1,13 @@
 #ifndef FIELD_H
 #define FIELD_H
 
+#include <cstddef>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-#include <cstddef>
-
-#include "tile.h"
+#include "../Tile/tile.h"
 
 class Field
 {
