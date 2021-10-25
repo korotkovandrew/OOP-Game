@@ -2,25 +2,9 @@
 
 /* Constructors and Destructors */
 
-Field::Field(const unsigned short *sample, size_t width, size_t height)
-    : width(width),
-      height(height)
-{
-    this->tiles = new Tile *[width];
-    for (size_t x = 0; x < this->width; x++)
-    {
-        this->tiles[x] = new Tile[height];
-        for (size_t y = 0; y < this->height; y++)
-        {
-            this->tiles[x][y] = Tile(sample[x + y * width]);
-        }
-    }
-}
-
 Field::~Field()
 {
-    for (size_t x = 0; x < width; x++)
-    {
+    for (size_t x = 0; x < width; x++) {
         delete[] this->tiles[x];
     }
     delete[] this->tiles;
@@ -49,7 +33,7 @@ Field::Field(Field &&other)
     other.tiles = nullptr;
 }
 
-/* Operator overrides */
+/* Operator overloads */
 
 Field &Field::operator=(const Field &other)
 {
@@ -97,9 +81,14 @@ Field &Field::operator=(Field &&other)
 
 /* Public Functions */
 
-const Tile &Field::getTile(size_t x, size_t y) const
+void Field::setWidth(size_t width)
 {
-    return tiles[x][y];
+    this->width = width;
+}
+
+void Field::setHeight(size_t height)
+{
+    this->height = height;
 }
 
 size_t Field::getWidth() const

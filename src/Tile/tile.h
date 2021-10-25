@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 
-#include "../Interfaces/i_entity.h"
+#include "../Interfaces/entity.h"
 
 enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
 
@@ -20,10 +20,10 @@ public:
     bool isPassable() const;
 
     unsigned short getType() const;
-    const IEntity& getEntity() const;
+    const Entity& getEntity() const;
 
 private:
-    IEntity *entity;
+    Entity *entity;
     unsigned short type;
 };
 

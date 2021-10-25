@@ -15,7 +15,7 @@ Tile::~Tile()
 Tile &Tile::operator=(const Tile &other)
 {
     this->type = other.type;
-    // entity = new IEntity(other.entity);
+    //? entity = new IEntity(other.entity);
     this->entity = other.entity;
 }
 
@@ -35,7 +35,7 @@ unsigned short Tile::getType() const
     return this->type;
 }
 
-const IEntity& Tile::getEntity() const
+const Entity& Tile::getEntity() const
 {
     return *(this->entity);
 }

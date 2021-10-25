@@ -3,16 +3,12 @@
 
 #include <cstddef>
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-
 #include "../Tile/tile.h"
 
 class Field
 {
 public:
-    Field(const unsigned short* sample, size_t width, size_t height);
+    Field() = default;
     ~Field();
 
     Field(const Field &);
@@ -21,12 +17,14 @@ public:
     Field& operator=(Field &&);
 
     size_t getWidth() const;
-    size_t getHeight() const;
-    const Tile& getTile(size_t x, size_t y) const;
+    void setWidth(size_t);
 
-private:
+    size_t getHeight() const;
+    void setHeight(size_t);
+    
     Tile **tiles;
 
+private:
     size_t width;
     size_t height;
 };

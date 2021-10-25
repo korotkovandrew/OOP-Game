@@ -19,7 +19,7 @@ void Drawer::loadFromFile(const char* tileset, sf::Vector2u tileSize)
     for (unsigned int x = 0; x < width; ++x)
         for (unsigned int y = 0; y < height; ++y)
         {
-            unsigned short tileNumber = target->getTile(x, y).getType();
+            unsigned short tileNumber = target->tiles[x][y].getType();
 
             int tu = tileNumber % (m_tileset.getSize().x / tileSize.x);
             int tv = tileNumber / (m_tileset.getSize().x / tileSize.x);

@@ -13,6 +13,8 @@ set (
     field
     src/Field/field.cpp
     src/Field/field.h
+    src/Field/field_builder.cpp
+    src/Field/field_builder.h
 )
 set (
     drawer
@@ -29,7 +31,7 @@ set (
 set (
     auxiliary
     
-    src/Interfaces/i_entity.h
+    src/Interfaces/entity.h
     src/Structs/sample.h
     settings/config.h
 )
