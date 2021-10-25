@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 
-#include "../Interfaces/i_entity.h"
+#include "../Interfaces/entity.h"
 #include "tile_type_enum.h"
 
 class Tile
@@ -19,10 +19,10 @@ public:
     bool isPassable() const;
 
     unsigned short getType() const;
-    const IEntity& getEntity() const;
+    const Entity& getEntity() const;
 
 private:
-    IEntity *entity;
+    Entity *entity;
     unsigned short type;
 };
 
