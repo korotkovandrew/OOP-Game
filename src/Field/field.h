@@ -3,7 +3,12 @@
 
 #include <cstddef>
 
+#include "../Entity/Alive/Hero/hero.h"
+#include "../Entity/Alive/Enemy/enemy.h"
+#include "../Entity/Item/item.h"
 #include "../Tile/tile.h"
+
+enum Direction {UP, DOWN, LEFT, RIGHT};
 
 class Field
 {
@@ -16,6 +21,11 @@ public:
     Field(Field &&);
     Field& operator=(Field &&);
 
+    // void move(size_t x, size_t y, Direction dir);
+    void move(size_t x, size_t y, size_t dest_x, size_t dest_y);
+
+    void remove(size_t x, size_t y);
+
     size_t getWidth() const;
     void setWidth(size_t);
 
@@ -23,6 +33,9 @@ public:
     void setHeight(size_t);
     
     Tile **tiles;
+
+    std::vector<Enemy *> ;
+    std::vector<Items *> ;
 
 private:
     size_t width;

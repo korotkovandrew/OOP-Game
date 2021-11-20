@@ -32,10 +32,17 @@ void Game::initField()
 {
     FieldBuilder fbuilder;
     fbuilder.loadSampleFromFile(SAMPLE_PATH);
+    
+    fbuilder.setDifficulty(HARD);
+
+    
+
+    fbuilder.spawnEntities(enemies);
+    fbuilder.spawnEntities(items);
+    
     fbuilder.build();
     
     field = fbuilder.getResult();
-    std::cout << field->getWidth() << " " << field->getHeight() << std::endl;
 }
 
 void Game::initWindow()
@@ -43,6 +50,7 @@ void Game::initWindow()
     window = new sf::RenderWindow(sf::VideoMode(field->getWidth() * TILE_SIZE,
                                                 field->getHeight() * TILE_SIZE),
                                   WINDOW_NAME);
+    window->setSize(sf::Vector2u(window->getSize().x * 3u, window->getSize().y * 3u));
 }
 
 void Game::initDrawer()

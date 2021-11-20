@@ -3,28 +3,37 @@
 
 #include <stdexcept>
 
-#include "../Interfaces/entity.h"
+#include "../Entity/entity.h"
 
-enum TileType {WALL, GROUND, ENTRANCE, EXIT, NUMBER_OF_TYPES};
+enum TileType
+{
+    WALL,
+    GROUND,
+    ENTRANCE,
+    EXIT
+};
 
 class Tile
 {
 public:
     Tile() = default;
-    Tile(unsigned short type);
+    Tile(TileType type);
     ~Tile();
 
-    Tile& operator=(const Tile&);
-    
+    Tile &operator=(const Tile &);
+    Tile &Tile::operator=(Tile &&);
+
     bool isEmpty() const;
     bool isPassable() const;
 
-    unsigned short getType() const;
-    const Entity& getEntity() const;
+    TileType getType() const;
+    Entity *getEntity() const;
+
+    void setEntity(Entity *entity);  
 
 private:
     Entity *entity;
-    unsigned short type;
+    TileType type;
 };
 
 #endif // TILE_H

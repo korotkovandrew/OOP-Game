@@ -1,7 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-class Entity 
+class Entity
 {
 public:
     virtual ~Entity() = 0;

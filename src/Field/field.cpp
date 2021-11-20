@@ -81,6 +81,37 @@ Field &Field::operator=(Field &&other)
 
 /* Public Functions */
 
+// void Field::move(size_t x, size_t y, Direction dir)
+// {   
+//     size_t dest_x, dest_y;
+//     switch (dir)
+//     {
+//     case UP:
+//         dest_x = x;
+//         dest_y = y - 1;
+//         break;
+//     case DOWN:
+//         dest_x = x;
+//         dest_y = y + 1;
+//         break;
+//     case LEFT:
+//         dest_x = x - 1;
+//         dest_y = y;
+//         break;
+//     case RIGHT:
+//         dest_x = x - 1;
+//         dest_y = y;
+//         break;
+//     }
+
+    
+// }
+
+void Field::move(size_t x, size_t y, size_t dest_x, size_t dest_y)
+{
+    fie
+}
+
 void Field::setWidth(size_t width)
 {
     this->width = width;
