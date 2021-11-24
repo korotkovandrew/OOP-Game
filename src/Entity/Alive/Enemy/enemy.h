@@ -6,8 +6,7 @@
 class Enemy : public Alive
 {
 public:
-    Enemy(/* args */);
-    ~Enemy();
+    Enemy(unsigned int hp, unsigned int dmg);
 };
 
 #endif // ENEMY_H

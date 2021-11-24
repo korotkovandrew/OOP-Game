@@ -107,11 +107,6 @@ Field &Field::operator=(Field &&other)
     
 // }
 
-void Field::move(size_t x, size_t y, size_t dest_x, size_t dest_y)
-{
-    fie
-}
-
 void Field::setWidth(size_t width)
 {
     this->width = width;

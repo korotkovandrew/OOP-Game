@@ -21,14 +21,13 @@ public:
     ~Tile();
 
     Tile &operator=(const Tile &);
-    Tile &Tile::operator=(Tile &&);
 
     bool isEmpty() const;
     bool isPassable() const;
 
     TileType getType() const;
+    
     Entity *getEntity() const;
-
     void setEntity(Entity *entity);  
 
 private:

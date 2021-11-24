@@ -37,8 +37,8 @@ void Game::initField()
 
     
 
-    fbuilder.spawnEntities(enemies);
-    fbuilder.spawnEntities(items);
+    // fbuilder.spawnEntities(enemies);
+    // fbuilder.spawnEntities(items);
     
     fbuilder.build();
     

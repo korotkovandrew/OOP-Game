@@ -5,7 +5,7 @@
 
 #include "../Entity/Alive/Hero/hero.h"
 #include "../Entity/Alive/Enemy/enemy.h"
-#include "../Entity/Item/item.h"
+// #include "../Entity/Item/item.h"
 #include "../Tile/tile.h"
 
 enum Direction {UP, DOWN, LEFT, RIGHT};
@@ -33,9 +33,6 @@ public:
     void setHeight(size_t);
     
     Tile **tiles;
-
-    std::vector<Enemy *> ;
-    std::vector<Items *> ;
 
 private:
     size_t width;

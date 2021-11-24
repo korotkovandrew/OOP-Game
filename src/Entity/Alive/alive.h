@@ -5,10 +5,18 @@
 
 class Alive : public Entity
 {
+public:
+    Alive(unsigned int hp, unsigned int dmg);
+    ~Alive();
+
+    bool isDead() const;
+    unsigned int getDamage() const;
+    void getHit(const Alive &);
+
 private:
-    int health;
-    int damage;
-    
+    unsigned int health;
+    unsigned int damage;
+    bool dead;
 };
 
 #endif // ALIVE_H

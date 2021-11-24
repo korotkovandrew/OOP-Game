@@ -29,9 +29,25 @@ set (
 )
 
 set (
+    entity
+    ./src/Entity/entity.h
+    ./src/Entity/Alive/alive.cpp
+    ./src/Entity/Alive/alive.h
+    ./src/Entity/Alive/Hero/hero.cpp
+    ./src/Entity/Alive/Hero/hero.h
+    ./src/Entity/Alive/Enemy/enemy.cpp
+    ./src/Entity/Alive/Enemy/enemy.h
+    ./src/Entity/Alive/Enemy/Goblin/goblin.cpp
+    ./src/Entity/Alive/Enemy/Goblin/goblin.h
+    ./src/Entity/Alive/Enemy/Slime/slime.cpp
+    ./src/Entity/Alive/Enemy/Slime/slime.h
+    ./src/Entity/Alive/Enemy/Troll/troll.cpp
+    ./src/Entity/Alive/Enemy/Troll/troll.h
+)
+
+set (
     auxiliary
     
-    src/Interfaces/entity.h
     src/Structs/sample.h
     settings/config.h
 )
@@ -44,6 +60,7 @@ add_executable(
     ${drawer}
     ${tile}
     ${auxiliary}
+    ${entity}
 )
 
 target_link_libraries (OOP sfml-graphics sfml-window sfml-system)
