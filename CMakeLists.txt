@@ -5,62 +5,81 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -IC:/SFML-2.5.1/include -LC:/SFML-2.5.1/
 
 set (
     game
-    src/Game/game.cpp
-    src/Game/game.h
+    source/Game/game.cpp
+    source/Game/game.h
 )
 
 set (
     field
-    src/Field/field.cpp
-    src/Field/field.h
-    src/Field/field_builder.cpp
-    src/Field/field_builder.h
+    source/Field/field.cpp
+    source/Field/field.h
+    source/Field/field_builder.cpp
+    source/Field/field_builder.h
 )
 set (
     drawer
-    ./src/Drawer/drawer.cpp
-    ./src/Drawer/drawer.h
+    ./source/Drawer/drawer.cpp
+    ./source/Drawer/drawer.h
 )
 
 set (
     tile    
-    ./src/Tile/tile.cpp
-    ./src/Tile/tile.h
+    ./source/Tile/tile.cpp
+    ./source/Tile/tile.h
 )
 
 set (
     entity
-    ./src/Entity/entity.h
-    ./src/Entity/Alive/alive.cpp
-    ./src/Entity/Alive/alive.h
-    ./src/Entity/Alive/Hero/hero.cpp
-    ./src/Entity/Alive/Hero/hero.h
-    ./src/Entity/Alive/Enemy/enemy.cpp
-    ./src/Entity/Alive/Enemy/enemy.h
-    ./src/Entity/Alive/Enemy/Goblin/goblin.cpp
-    ./src/Entity/Alive/Enemy/Goblin/goblin.h
-    ./src/Entity/Alive/Enemy/Slime/slime.cpp
-    ./src/Entity/Alive/Enemy/Slime/slime.h
-    ./src/Entity/Alive/Enemy/Troll/troll.cpp
-    ./src/Entity/Alive/Enemy/Troll/troll.h
+    ./source/Entity/entity.h
+)
+
+set (
+    alive
+    ./source/Entity/Alive/alive.cpp
+    ./source/Entity/Alive/alive.h
+    ./source/Entity/Alive/Hero/hero.cpp
+    ./source/Entity/Alive/Hero/hero.h
+    ./source/Entity/Alive/Enemy/enemy.cpp
+    ./source/Entity/Alive/Enemy/enemy.h
+    ./source/Entity/Alive/Enemy/Goblin/goblin.cpp
+    ./source/Entity/Alive/Enemy/Goblin/goblin.h
+    ./source/Entity/Alive/Enemy/Slime/slime.cpp
+    ./source/Entity/Alive/Enemy/Slime/slime.h
+    ./source/Entity/Alive/Enemy/Troll/troll.cpp
+    ./source/Entity/Alive/Enemy/Troll/troll.h
+)
+
+set (
+    movers
+    ./source/Movers/enemy_mover.cpp
+    ./source/Movers/enemy_mover.h
+    ./source/Movers/hero_mover.cpp
+    ./source/Movers/hero_mover.h
+)
+
+set (
+    item
+    ./source/Entity/Item/item.cpp
+    ./source/Entity/Item/item.h
 )
 
 set (
     auxiliary
-    
-    src/Structs/sample.h
     settings/config.h
 )
 
 add_executable(
     OOP 
-    src/main.cpp
+    source/main.cpp
     ${game}
     ${field}
     ${drawer}
     ${tile}
     ${auxiliary}
     ${entity}
+    ${alive}
+    ${item}
+    ${movers}
 )
 
 target_link_libraries (OOP sfml-graphics sfml-window sfml-system)
