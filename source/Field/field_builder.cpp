@@ -63,7 +63,6 @@ void FieldBuilder::spawnEnemies()
     if (easyEnemies + normalEnemies + hardEnemies > tiles.size())
         throw std::runtime_error("Not enough space to spawn enemies");
 
-
     std::vector<Enemy *> enemies;
     for (size_t i = 0; i < easyEnemies; i++)
         enemies.push_back(new Slime);

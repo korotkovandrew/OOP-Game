@@ -2,6 +2,7 @@
 
 Game::Game()
 {       
+    initLogSystem();
     initField();
     initWindow();
     initDrawer();
@@ -64,8 +65,16 @@ void Game::initLogic()
     hMover = new HeroMover(field);
     dir = UP;
     movementMade = false;
+    missionCompleted = false;
     changed = false;
     gameOver = false;
+}
+
+void Game::initLogSystem()
+{
+    LoggerPool *loggerPool = LoggerPool::getInstance();
+    loggerPool->pushLogger(new ConsoleLogger());
+    loggerPool->pushLogger(new FileLogger());
 }
 
 void Game::updateEvents()
@@ -73,8 +82,10 @@ void Game::updateEvents()
     while (window->pollEvent(ev))
     {
         if (ev.type == sf::Event::Closed ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-            window->close();
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+                window->close();
+                obs.submit(this, GAME_INTERRUPTED);                
+            }
         if (!movementMade && ev.type == sf::Event::KeyPressed) {
             auto hTile = field->heroTile;
             size_t x = hTile->getX();
@@ -106,28 +117,42 @@ void Game::updateLogic()
         changed = true;
     }
 
-    if (changed) {
-        checkHero(); 
-        changed = false; 
-    }
+    if (!missionCompleted) missionCompleted = isMissionCompleted();
+
+    if (changed) checkHero(); 
     if (gameOver) window->close();
 }
 
 void Game::render()
 {
     window->clear(sf::Color(BG_COLOR));
-
     drawer->draw(*window);
-
     window->display();
 }
 
 void Game::checkHero()
 {
-    if (dynamic_cast<Hero*>(field->heroTile->getEntity())->isDead()) 
+    Hero *hero = dynamic_cast<Hero*>(field->heroTile->getEntity());
+    if (hero->isDead()) {
         gameOver = true;
-    else if (field->heroTile->getType() == EXIT) { 
+        obs.submit(this, LogSignal::GAME_OVER);
+    }
+    else if (missionCompleted && 
+             field->heroTile->getType() == EXIT) { 
         // drawer->displayMessage();
         gameOver = true;
+        obs.submit(hero, HERO_EXITED);
+        obs.submit(this, LogSignal::GAME_OVER);
     }
+    changed = false; 
+}
+
+bool Game::isMissionCompleted()
+{
+    bool condition = field->enemyTiles.empty();
+    if (condition) {
+        missionCompleted = true; 
+        obs.submit(this, MISSION_COMPLETED);
+    }
+    return condition;
 }

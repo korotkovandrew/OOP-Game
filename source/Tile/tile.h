@@ -4,8 +4,7 @@
 #include <stdexcept>
 
 #include "../Entity/entity.h"
-
-enum TileType { WALL, GROUND, ENTRANCE, EXIT };
+#include "../Structures/tile_type.h"
 
 class Tile
 {

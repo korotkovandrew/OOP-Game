@@ -2,18 +2,19 @@
 #define ALIVE_H
 
 #include "../entity.h"
+#include "../../LogSystem/observer.h"
 
 class Alive : public Entity
 {
 public:
     Alive(size_t hp, size_t dmg);
 
-    virtual void getHit(const Alive &);
+    virtual void getHit(const Alive &) = 0;
 
     size_t getHealth() const;
     size_t getDamage() const;
     
-    bool isDead() const;
+    virtual bool isDead() const = 0;
 
 protected:
     size_t health;

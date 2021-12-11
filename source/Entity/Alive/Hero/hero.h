@@ -14,11 +14,13 @@ public:
 
     size_t getArmor() const;
     size_t getMaxHealth() const;
+    bool isDead() const;
 
     void use(Item &);
 private:
     size_t armor;
     size_t maxHealth;
+    Observer obs;
 };
 
 #endif

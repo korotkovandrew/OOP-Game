@@ -5,19 +5,20 @@ EnemyMover::EnemyMover(Field *f) : field(f) {}
 void EnemyMover::move()
 {
     for (int i = 0; i < field->enemyTiles.size(); i++) {
+        Enemy *enemy = dynamic_cast<Enemy*>(field->enemyTiles[i]->getEntity());
         std::vector<Tile *> freeTiles;
         getValidAdjTiles(field->enemyTiles[i], freeTiles);
-        Tile *tileToGo = freeTiles[rand() % freeTiles.size()];
-        if (tileToGo == field->heroTile) {
+        if (!freeTiles.empty()) {
+            Tile *tileToGo = freeTiles[rand() % freeTiles.size()];
             Hero *hero = dynamic_cast<Hero*>(tileToGo->getEntity());
-            Enemy *enemy = dynamic_cast<Enemy*>(field->enemyTiles[i]->getEntity());
-            
-            hero->fight(*enemy);
-            
-            if (hero->isDead()) return;
-        } else {
-            tileToGo->setEntity(field->enemyTiles[i]->popEntity());
-            field->enemyTiles[i] = tileToGo;
+            if (hero) {
+                hero->fight(*enemy);
+                obs.submit(tileToGo, ENEMY_MOVED); 
+            } else {
+                tileToGo->setEntity(enemy);
+                field->enemyTiles[i] = tileToGo;
+                obs.submit(tileToGo, ENEMY_MOVED); 
+            }
         }
     }
     
@@ -37,10 +38,11 @@ void EnemyMover::getValidAdjTiles(Tile *tile, std::vector<Tile *> &res)
     tiles.push_back(&field->tiles[x][y - 1]);
     tiles.push_back(&field->tiles[x][y + 1]);
 
-    for (auto tile: tiles) {
-        if (tile->getType() == GROUND && 
-           (!tile->getEntity() || typeid(*tile->getEntity()).name() == typeid(Hero).name())) {
-            res.push_back(tile);
+
+    for (auto t: tiles) {
+        Hero *hero = dynamic_cast<Hero*>(t->getEntity());
+        if ((t->getType() == GROUND && !t->getEntity()) || hero) {
+            res.push_back(t);
         }
     }
 }

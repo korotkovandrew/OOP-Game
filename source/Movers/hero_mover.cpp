@@ -4,48 +4,38 @@ HeroMover::HeroMover(Field *f) : field(f) {}
 
 void HeroMover::move(Direction dir)
 {
-    size_t x = field->heroTile->getX();
-    size_t y = field->heroTile->getY();
-    size_t dx = 0;
-    size_t dy = 0;
+    
+    size_t x = field->heroTile->getX(), dx = 0;
+    size_t y = field->heroTile->getY(), dy = 0;
     Hero *hero = dynamic_cast<Hero *>(field->heroTile->getEntity());
 
-    switch (dir)
-    {
-    case UP:    dy--; break;
-    case DOWN:  dy++; break;
-    case LEFT:  dx--; break;
-    case RIGHT: dx++; break;
-    }
+    if      (dir == UP)    dy--;
+    else if (dir == DOWN)  dy++;
+    else if (dir == LEFT)  dx--;
+    else if (dir == RIGHT) dx++;
     
     Tile *destination = &field->tiles[x + dx][y + dy];
-    Entity *ent = destination->getEntity(); 
-    Enemy *enemy = nullptr;
-    Item *item = nullptr;
+    Entity *ent = destination->getEntity();
+    Enemy *enemy = dynamic_cast<Enemy *>(ent);
+    Item *item = dynamic_cast<Item *>(ent);
 
-    if (!destination->isPassable())
-    {
-        // std::cout << "movement blocked from (" << x << ", " << y << ")" << " to (" << x + dx << ", " << y + dy << ")" << std::endl;
+    if (!destination->isPassable()) { 
+        obs.submit(destination, HERO_MOVEMENT_BLOCKED);
         return;
-    }
+    };
 
-    if (!ent)
-    {
+    if (!ent) {
         destination->setEntity(field->heroTile->popEntity());
         field->heroTile = destination;
+        obs.submit(destination, HERO_MOVED);
         return;
     }
-    auto destEntityType = typeid(*ent).name();
 
-    if (destEntityType == typeid(Item).name())
-    {
-        item = dynamic_cast<Item *>(ent);
+    if (item) {
         hero->use(*item);
         field->removeTile(field->itemTiles, destination);
     }
-    else
-    {
-        enemy = dynamic_cast<Enemy *>(ent);
+    else if (enemy) {
         hero->fight(*enemy);
         if (hero->isDead()) return;
         field->removeTile(field->enemyTiles, destination);
@@ -53,4 +43,5 @@ void HeroMover::move(Direction dir)
     
     destination->setEntity(field->heroTile->popEntity());
     field->heroTile = destination;
+    obs.submit(destination, HERO_MOVED);
 }

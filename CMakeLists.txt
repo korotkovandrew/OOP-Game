@@ -18,54 +18,77 @@ set (
 )
 set (
     drawer
-    ./source/Drawer/drawer.cpp
-    ./source/Drawer/drawer.h
+    source/Drawer/drawer.cpp
+    source/Drawer/drawer.h
 )
 
 set (
     tile    
-    ./source/Tile/tile.cpp
-    ./source/Tile/tile.h
+    source/Tile/tile.cpp
+    source/Tile/tile.h
 )
 
 set (
     entity
-    ./source/Entity/entity.h
+    source/Entity/entity.h
 )
 
 set (
     alive
-    ./source/Entity/Alive/alive.cpp
-    ./source/Entity/Alive/alive.h
-    ./source/Entity/Alive/Hero/hero.cpp
-    ./source/Entity/Alive/Hero/hero.h
-    ./source/Entity/Alive/Enemy/enemy.cpp
-    ./source/Entity/Alive/Enemy/enemy.h
-    ./source/Entity/Alive/Enemy/Goblin/goblin.cpp
-    ./source/Entity/Alive/Enemy/Goblin/goblin.h
-    ./source/Entity/Alive/Enemy/Slime/slime.cpp
-    ./source/Entity/Alive/Enemy/Slime/slime.h
-    ./source/Entity/Alive/Enemy/Troll/troll.cpp
-    ./source/Entity/Alive/Enemy/Troll/troll.h
+    source/Entity/Alive/alive.cpp
+    source/Entity/Alive/alive.h
+    source/Entity/Alive/Hero/hero.cpp
+    source/Entity/Alive/Hero/hero.h
+    source/Entity/Alive/Enemy/enemy.cpp
+    source/Entity/Alive/Enemy/enemy.h
+    source/Entity/Alive/Enemy/Goblin/goblin.cpp
+    source/Entity/Alive/Enemy/Goblin/goblin.h
+    source/Entity/Alive/Enemy/Slime/slime.cpp
+    source/Entity/Alive/Enemy/Slime/slime.h
+    source/Entity/Alive/Enemy/Troll/troll.cpp
+    source/Entity/Alive/Enemy/Troll/troll.h
 )
 
 set (
     movers
-    ./source/Movers/enemy_mover.cpp
-    ./source/Movers/enemy_mover.h
-    ./source/Movers/hero_mover.cpp
-    ./source/Movers/hero_mover.h
+    source/Movers/enemy_mover.cpp
+    source/Movers/enemy_mover.h
+    source/Movers/hero_mover.cpp
+    source/Movers/hero_mover.h
 )
 
 set (
     item
-    ./source/Entity/Item/item.cpp
-    ./source/Entity/Item/item.h
+    source/Entity/Item/item.cpp
+    source/Entity/Item/item.h
+)
+
+set (
+    logger
+    source/LogSystem/adapter.h
+    source/LogSystem/adapter.cpp
+    source/LogSystem/logger_pool.h
+    source/LogSystem/logger_pool.cpp
+    source/LogSystem/observer.h
+    source/LogSystem/Loggers/ilogger.h
+    source/LogSystem/Loggers/console_logger.h
+    source/LogSystem/Loggers/console_logger.cpp
+    source/LogSystem/Loggers/file_logger.h
+    source/LogSystem/Loggers/file_logger.cpp
+    source/LogSystem/Loggers/LogMessage/log_message.h
 )
 
 set (
     auxiliary
     settings/config.h
+)
+
+set (
+    structures
+    source/Structures/direction.h
+    source/Structures/item_type.h
+    source/Structures/log_signal.h
+    source/Structures/tile_type.h
 )
 
 add_executable(
@@ -80,6 +103,7 @@ add_executable(
     ${alive}
     ${item}
     ${movers}
+    ${logger}
 )
 
 target_link_libraries (OOP sfml-graphics sfml-window sfml-system)

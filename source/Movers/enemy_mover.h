@@ -1,5 +1,9 @@
-#ifndef ENEMY_MOVER_H
-#define ENEMY_MOVER_H
+#ifndef ENEMY_MOVEDR_H
+#define ENEMY_MOVEDR_H
+
+#include "../LogSystem/observer.h"
+
+#include "../Structures/log_signal.h"
 
 #include "../Field/field.h"
 #include "../Entity/Alive/Hero/hero.h"
@@ -15,6 +19,7 @@ private:
     void getValidAdjTiles(Tile *, std::vector<Tile*> &);
     
     Field *field;
+    Observer obs;
 };
 
-#endif // ENEMY_MOVER_H
+#endif // ENEMY_MOVEDR_H

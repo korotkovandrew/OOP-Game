@@ -22,6 +22,12 @@
 #include "../Movers/enemy_mover.h"
 #include "../Movers/hero_mover.h"
 
+#include "../Structures/log_signal.h"
+#include "../LogSystem/observer.h"
+#include "../LogSystem/logger_pool.h"
+#include "../LogSystem/Loggers/console_logger.h"
+#include "../LogSystem/Loggers/file_logger.h"
+
 class Game
 {
 public:
@@ -35,13 +41,14 @@ private:
     void initWindow();
     void initDrawer();
     void initLogic();
-    
+    void initLogSystem();
+
     void updateEvents();
     void updateLogic();
     void render();
 
     void checkHero();
-
+    bool isMissionCompleted();
     void displayWinMessage();
 
     sf::RenderWindow *window;
@@ -49,6 +56,7 @@ private:
     
     bool movementMade;
     bool changed;
+    bool missionCompleted;
     bool gameOver;
     Direction dir;
 
@@ -56,6 +64,7 @@ private:
     HeroMover *hMover;
     Drawer *drawer;
     Field *field;
+    Observer obs;
 };
 
 #endif // GAME_H

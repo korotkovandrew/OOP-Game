@@ -5,9 +5,8 @@
 #include <vector>
 #include <algorithm>
 
+#include "../Structures/direction.h"
 #include "../Tile/tile.h"
-
-enum Direction { UP, DOWN, LEFT, RIGHT };
 
 class Field
 {

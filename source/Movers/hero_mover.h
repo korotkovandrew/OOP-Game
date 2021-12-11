@@ -1,5 +1,7 @@
-#ifndef HERO_MOVER_H
-#define HERO_MOVER_H
+#ifndef HERO_MOVEDR_H
+#define HERO_MOVEDR_H
+
+#include "../Structures/log_signal.h"
 
 #include "../Field/field.h"
 #include "../Entity/Alive/Hero/hero.h"
@@ -13,6 +15,7 @@ public:
     void move(Direction);
 private:
     Field *field;
+    Observer obs;
 };
 
-#endif // HERO_MOVER_H
+#endif // HERO_MOVEDR_H

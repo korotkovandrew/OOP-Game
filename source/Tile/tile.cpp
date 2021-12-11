@@ -23,7 +23,6 @@ Tile &Tile::operator=(const Tile &other)
 }
 
 /* Public Functions */
-
 bool Tile::isPassable() const
 {
     return type != WALL;
