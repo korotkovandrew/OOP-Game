@@ -3,6 +3,7 @@
 
 #include <typeinfo>
 #include <sstream>
+#include <map>
 
 #include "logger_pool.h"
 #include "../Structures/log_signal.h"
@@ -12,11 +13,11 @@ class Hero; class Enemy; class Item; class Tile; class Game;
 class Adapter
 {
 public:
-    void convert(const Hero* hero, LogSignal ev) const;
-    void convert(const Enemy* enemy, LogSignal ev) const;
-    void convert(const Item* item, LogSignal ev) const;
-    void convert(const Tile* tile, LogSignal ev) const;
-    void convert(const Game* game, LogSignal ev) const;
+    void convert(Hero* hero, LogSignal ev);
+    void convert(Enemy* enemy, LogSignal ev);
+    void convert(Item* item, LogSignal ev);
+    void convert(Tile* tile, LogSignal ev);
+    void convert(Game* game, LogSignal ev);
 
     void redirectToPool(std::string data) const;
 };

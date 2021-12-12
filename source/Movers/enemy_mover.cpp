@@ -13,9 +13,8 @@ void EnemyMover::move()
             Hero *hero = dynamic_cast<Hero*>(tileToGo->getEntity());
             if (hero) {
                 hero->fight(*enemy);
-                obs.submit(tileToGo, ENEMY_MOVED); 
             } else {
-                tileToGo->setEntity(enemy);
+                tileToGo->setEntity(field->enemyTiles[i]->popEntity());
                 field->enemyTiles[i] = tileToGo;
                 obs.submit(tileToGo, ENEMY_MOVED); 
             }

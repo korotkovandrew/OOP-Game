@@ -2,7 +2,6 @@
 #define ALIVE_H
 
 #include "../entity.h"
-#include "../../LogSystem/observer.h"
 
 class Alive : public Entity
 {
@@ -14,7 +13,7 @@ public:
     size_t getHealth() const;
     size_t getDamage() const;
     
-    virtual bool isDead() const = 0;
+    virtual bool isDead() = 0;
 
 protected:
     size_t health;

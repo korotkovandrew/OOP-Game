@@ -9,4 +9,4 @@ public:
     Troll(size_t hp = 60, size_t dmg = 15);
 };
 
-#endif
+#endif // TROLL_H

@@ -7,7 +7,7 @@
 #include "../Entity/Alive/Enemy/Goblin/goblin.h"
 #include "../Entity/Alive/Enemy/Troll/troll.h"
 
-void Adapter::convert(const Hero* hero, LogSignal ev) const
+void Adapter::convert(Hero* hero, LogSignal ev) 
 {
     std::ostringstream osstr;
     osstr << "Hero (";
@@ -32,12 +32,20 @@ void Adapter::convert(const Hero* hero, LogSignal ev) const
     redirectToPool(osstr.str());
 }
 
-void Adapter::convert(const Enemy* enemy, LogSignal ev) const
+void Adapter::convert(Enemy* enemy, LogSignal ev) 
 {
     std::ostringstream osstr;
+    Slime *slime = dynamic_cast<Slime *>(enemy); 
+    Goblin *goblin = dynamic_cast<Goblin *>(enemy); 
+    Troll *troll = dynamic_cast<Troll *>(enemy);
+    if (slime) 
+        osstr << "Slime";
+    else if (goblin) 
+        osstr << "Goblin";
+    else if (troll) 
+        osstr << "Troll";
 
-    osstr << typeid(*enemy).name();
-    osstr << " (" << "HP=" << std::to_string(enemy->getHealth());
+    osstr << " (HP=" << std::to_string(enemy->getHealth());
     osstr << " DMG=" << std::to_string(enemy->getDamage()) << ") ";
 
     if (ev == ENEMY_GOT_HIT)
@@ -56,7 +64,7 @@ void Adapter::convert(const Enemy* enemy, LogSignal ev) const
     redirectToPool(osstr.str());
 }
 
-void Adapter::convert(const Item* item, LogSignal ev) const
+void Adapter::convert(Item* item, LogSignal ev) 
 {
     std::ostringstream osstr;
     ItemType itemType = item->getType();
@@ -84,7 +92,7 @@ void Adapter::convert(const Item* item, LogSignal ev) const
     redirectToPool(osstr.str());
 }
 
-void Adapter::convert(const Tile *tile, LogSignal ev) const
+void Adapter::convert(Tile *tile, LogSignal ev) 
 {
     std::ostringstream osstr;
     Entity *entity = tile->getEntity();
@@ -93,8 +101,16 @@ void Adapter::convert(const Tile *tile, LogSignal ev) const
 
     if (enemy && ev == ENEMY_MOVED)
     {
-        osstr << "Enemy (" << typeid(*enemy).name();
-        osstr << ": HP=" << enemy->getHealth();
+        Slime *slime = dynamic_cast<Slime *>(enemy); 
+        Goblin *goblin = dynamic_cast<Goblin *>(enemy); 
+        Troll *troll = dynamic_cast<Troll *>(enemy);
+        if (slime) 
+            osstr << "Slime";
+        else if (goblin) 
+            osstr << "Goblin";
+        else if (troll) 
+            osstr << "Troll";
+        osstr << " (HP=" << enemy->getHealth();
         osstr << " DMG=" << enemy->getDamage();
         osstr << ") moves to tile (" << tile->getX() << ", " << tile->getY() << ")";
     }
@@ -115,7 +131,7 @@ void Adapter::convert(const Tile *tile, LogSignal ev) const
     redirectToPool(osstr.str());
 }
 
-void Adapter::convert(const Game* game, LogSignal ev) const
+void Adapter::convert(Game* game, LogSignal ev) 
 {
     std::ostringstream osstr;
     if (ev == GAME_OVER)
@@ -132,7 +148,7 @@ void Adapter::convert(const Game* game, LogSignal ev) const
 }
 
 
-void Adapter::redirectToPool(std::string data) const 
+void Adapter::redirectToPool(std::string data) const
 {
     LoggerPool *lp = LoggerPool::getInstance();
     lp->submitDataToLoggers(data);

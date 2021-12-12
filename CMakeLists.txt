@@ -70,12 +70,14 @@ set (
     source/LogSystem/logger_pool.h
     source/LogSystem/logger_pool.cpp
     source/LogSystem/observer.h
+    source/LogSystem/observed.h
     source/LogSystem/Loggers/ilogger.h
     source/LogSystem/Loggers/console_logger.h
     source/LogSystem/Loggers/console_logger.cpp
     source/LogSystem/Loggers/file_logger.h
     source/LogSystem/Loggers/file_logger.cpp
     source/LogSystem/Loggers/LogMessage/log_message.h
+    source/LogSystem/Loggers/LogMessage/log_message.cpp
 )
 
 set (

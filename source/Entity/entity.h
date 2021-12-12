@@ -2,6 +2,7 @@
 #define ENTITY_H
 
 #include <cstddef>
+#include "../LogSystem/observed.h"
 
 class Entity
 {

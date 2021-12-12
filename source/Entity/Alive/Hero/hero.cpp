@@ -6,7 +6,7 @@ Hero::Hero(size_t hp, size_t dmg)
       maxHealth(hp),
       armor(0) 
 {
-    obs.submit((const Hero *)this, HERO_CREATED);
+    obs.submit(this, HERO_CREATED);
 }
 
 /* Public Functions */
@@ -51,7 +51,7 @@ size_t Hero::getMaxHealth() const
 }
 
 
-bool Hero::isDead() const
+bool Hero::isDead()
 {
     return dead;
 }

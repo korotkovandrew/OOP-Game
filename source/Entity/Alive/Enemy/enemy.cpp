@@ -1,10 +1,7 @@
 #include "enemy.h"
 
 /* Constructors and Destructors */
-Enemy::Enemy(size_t hp, size_t dmg) : Alive(hp, dmg) 
-{ 
-    obs.submit((const Enemy *)this, ENEMY_CREATED);
-}
+Enemy::Enemy(size_t hp, size_t dmg) : Alive(hp, dmg) {}
 
 void Enemy::getHit(const Alive &other)
 {
@@ -17,7 +14,7 @@ void Enemy::getHit(const Alive &other)
         health -= other.getDamage();
 }
 
-bool Enemy::isDead() const
+bool Enemy::isDead()
 {
     if (dead) obs.submit(this, ENEMY_DEATH);
     return dead;

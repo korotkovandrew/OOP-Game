@@ -2,4 +2,7 @@
 
 /* Constructors and Destructors */
 Troll::Troll(size_t hp, size_t dmg)
-: Enemy(hp, dmg) {}
+: Enemy(hp, dmg) 
+{
+    obs.submit(this, ENEMY_CREATED);
+}

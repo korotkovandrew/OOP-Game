@@ -3,15 +3,13 @@
 
 #include "../alive.h"
 
-class Enemy : public Alive
+class Enemy : public Alive, public Observed
 {
 public:
     Enemy(size_t hp, size_t dmg);
     void getHit(const Alive &other);
 
-    bool isDead() const;
-private:
-    Observer obs;
+    bool isDead();
 };
 
 #endif // ENEMY_H

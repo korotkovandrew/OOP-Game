@@ -5,7 +5,7 @@
 #include "../../LogSystem/observer.h"
 #include "../../Structures/item_type.h"
 
-class Item : public Entity
+class Item : public Entity, public Observed
 {
 public:
     Item(ItemType type, size_t stat);
@@ -16,7 +16,6 @@ public:
 private:
     ItemType type;
     size_t stat;
-    Observer obs;
 };
 
 #endif // ITEM_H

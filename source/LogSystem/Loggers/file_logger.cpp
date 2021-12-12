@@ -3,6 +3,7 @@
 FileLogger::FileLogger()
 {
     out.open("../log/log.txt", std::ofstream::trunc);
+    out << "File Logger:" << std::endl;
 }
 
 FileLogger::~FileLogger()

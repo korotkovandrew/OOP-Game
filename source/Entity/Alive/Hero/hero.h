@@ -14,7 +14,7 @@ public:
 
     size_t getArmor() const;
     size_t getMaxHealth() const;
-    bool isDead() const;
+    bool isDead();
 
     void use(Item &);
 private:

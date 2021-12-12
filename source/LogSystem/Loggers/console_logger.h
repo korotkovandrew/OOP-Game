@@ -7,6 +7,7 @@
 class ConsoleLogger : public ILogger
 {
 public:
+    ConsoleLogger();
     void log(std::string &);
 };
 

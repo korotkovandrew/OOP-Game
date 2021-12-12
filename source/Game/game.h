@@ -8,6 +8,7 @@
 #include <SFML/Window.hpp>
 #include "../Drawer/drawer.h"
 
+#include "Rules/rules.h"
 #include "../../settings/config.h"
 
 #include "../Field/field.h"
@@ -23,12 +24,13 @@
 #include "../Movers/hero_mover.h"
 
 #include "../Structures/log_signal.h"
-#include "../LogSystem/observer.h"
+#include "../LogSystem/observed.h"
 #include "../LogSystem/logger_pool.h"
 #include "../LogSystem/Loggers/console_logger.h"
 #include "../LogSystem/Loggers/file_logger.h"
 
-class Game
+
+class Game : public Observed
 {
 public:
     Game();
@@ -64,7 +66,6 @@ private:
     HeroMover *hMover;
     Drawer *drawer;
     Field *field;
-    Observer obs;
 };
 
 #endif // GAME_H

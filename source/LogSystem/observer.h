@@ -9,7 +9,7 @@ class Observer
 {
 public:
     template <typename T>
-    void submit(const T* sender, LogSignal ev) const
+    void submit(T* sender, LogSignal ev)
     {
         adapter.convert(sender, ev);
     }
