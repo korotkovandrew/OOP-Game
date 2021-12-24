@@ -3,6 +3,7 @@
 template <class Rules>
 Game<Rules>::Game()
 {
+    initControl();
     initLogSystem();
     initField();
     initWindow();
@@ -29,6 +30,12 @@ void Game<Rules>::run()
         updateLogic();
         render();
     }
+}
+
+template <class Rules>
+void Game<Rules>::initControl()
+{
+    keyAdapter = new KeyAdapter();
 }
 
 template <class Rules>
@@ -75,7 +82,7 @@ void Game<Rules>::initLogic()
 {
     eMover = new EnemyMover(field);
     hMover = new HeroMover(field);
-    dir = UP;
+    reaction = UP;
     movementMade = false;
     missionCompleted = false;
     changed = false;
@@ -100,21 +107,8 @@ void Game<Rules>::updateEvents()
                 window->close();             
             }
         if (!movementMade && ev.type == sf::Event::KeyPressed) {
-            auto hTile = field->heroTile;
-            size_t x = hTile->getX();
-            size_t y = hTile->getY();
-            if (ev.key.code == sf::Keyboard::W || ev.key.code == sf::Keyboard::S || ev.key.code == sf::Keyboard::A || ev.key.code == sf::Keyboard::D) 
-            {
-                if (ev.key.code == sf::Keyboard::W)
-                    dir = UP;
-                else if (ev.key.code == sf::Keyboard::S)
-                    dir = DOWN;
-                else if (ev.key.code == sf::Keyboard::A) 
-                    dir = LEFT;
-                else if (ev.key.code == sf::Keyboard::D) 
-                    dir = RIGHT;
-                movementMade = true;
-            }
+            reaction = keyAdapter->processKeyCode(ev.key.code);
+            if (reaction != STOP) movementMade = true;
         }
     }
 }
@@ -123,8 +117,7 @@ template <class Rules>
 void Game<Rules>::updateLogic()
 {
     if (movementMade) {
-        hMover->move(dir);
-
+        hMover->move(reaction);
         eMover->move();
         
         movementMade = false;

@@ -81,13 +81,19 @@ set (
 )
 
 set (
+    control
+    source/Game/KeyAdapter/key_adapter.cpp
+    source/Game/KeyAdapter/key_adapter.h
+)
+
+set (
     auxiliary
     settings/config.h
 )
 
 set (
     structures
-    source/Structures/direction.h
+    source/Structures/event_reaction.h
     source/Structures/item_type.h
     source/Structures/log_signal.h
     source/Structures/tile_type.h
@@ -106,6 +112,7 @@ add_executable(
     ${item}
     ${movers}
     ${logger}
+    ${control}
 )
 
 target_link_libraries (OOP sfml-graphics sfml-window sfml-system)

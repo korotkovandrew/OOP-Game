@@ -1,7 +1,6 @@
 #ifndef FIELD_SAMPLE_H
 #define FIELD_SAMPLE_H
 
-
 typedef struct
 {
     unsigned short *content;
