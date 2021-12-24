@@ -7,7 +7,7 @@ FieldBuilder::FieldBuilder(HeroStats heroStats,
                            EnemyStats goblinStats,
                            EnemyStats trollStats,
                            ItemsCount itemsCount,
-                           ItemsValues itemsStats)
+                           ItemsValues itemsValues)
     : target(new Field()),
       loaded(false),
       heroStats(heroStats),
@@ -16,7 +16,7 @@ FieldBuilder::FieldBuilder(HeroStats heroStats,
       goblinStats(goblinStats),
       trollStats(trollStats),
       itemsCount(itemsCount),
-      itemsStats(itemsStats) {}
+      itemsValues(itemsValues) {}
 
 /* Public Functions */
 void FieldBuilder::loadSampleFromFile(std::string fileName)
@@ -104,11 +104,11 @@ void FieldBuilder::spawnItems()
     std::vector<Item *> items;
     
     for (size_t i = 0; i < healings; i++)
-        items.push_back(new Item(HEAL, itemsStats.heal));
+        items.push_back(new Item(HEAL, itemsValues.heal));
     for (size_t i = 0; i < damageUps; i++)
-        items.push_back(new Item(DMG, itemsStats.damageUp));
+        items.push_back(new Item(DMG, itemsValues.damageUp));
     for (size_t i = 0; i < armorUps; i++)
-        items.push_back(new Item(ARMOR, itemsStats.armorUp));
+        items.push_back(new Item(ARMOR, itemsValues.armorUp));
 
 
     srand(time(0));

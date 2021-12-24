@@ -27,7 +27,7 @@ public:
                  EnemyStats goblinStats,
                  EnemyStats trollStats,
                  ItemsCount itemsCount,
-                 ItemsValues itemsStats);
+                 ItemsValues itemsValues);
 
     void loadSampleFromFile(std::string fileName);
 
@@ -49,7 +49,7 @@ private:
     EnemyStats goblinStats;
     EnemyStats trollStats;
     ItemsCount itemsCount;
-    ItemsValues itemsStats;
+    ItemsValues itemsValues;
 };
 
 #endif // FIELD_BUILDER_H

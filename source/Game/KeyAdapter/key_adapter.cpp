@@ -2,7 +2,13 @@
 
 EventReaction KeyAdapter::processKeyCode(sf::Keyboard::Key keyCode)
 {
-    if (keyCode == sf::Keyboard::W || 
+    if (keyCode == sf::Keyboard::P) {
+        return SAVE;
+    }
+    else if (keyCode == sf::Keyboard::L) {
+        return LOAD;
+    }
+    else if (keyCode == sf::Keyboard::W || 
         keyCode == sf::Keyboard::S || 
         keyCode == sf::Keyboard::A || 
         keyCode == sf::Keyboard::D) 

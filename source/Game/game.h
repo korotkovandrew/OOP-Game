@@ -48,6 +48,9 @@ public:
     void run();
 
 private:
+    void save();
+    bool load();
+    
     void initField();
     void initWindow();
     void initControl();

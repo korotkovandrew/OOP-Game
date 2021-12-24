@@ -25,7 +25,7 @@ private:
     EnemyStats goblinStats = {GOBLIN_HEALTH, GOBLIN_DAMAGE};
     EnemyStats trollStats = {TROLL_HEALTH, TROLL_DAMAGE};
     ItemsCount itemsCount = {HEALING_COUNT, DAMAGE_UP_COUNT, ARMOR_UP_COUNT};
-    ItemsValues itemsStats = {HEALING_VALUE, DAMAGE_UP_VALUE, ARMOR_UP_VALUE};
+    ItemsValues itemsValues = {HEALING_VALUE, DAMAGE_UP_VALUE, ARMOR_UP_VALUE};
     WinConditions winConditions = {NECESSARY_EXIT, ALL_ENEMIES_MUST_BE_BEATEN};
 };
 
