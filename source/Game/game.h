@@ -23,14 +23,16 @@
 #include "../Movers/enemy_mover.h"
 #include "../Movers/hero_mover.h"
 
+
+#include "Rules/rules.h"
 #include "../Structures/log_signal.h"
 #include "../LogSystem/observed.h"
 #include "../LogSystem/logger_pool.h"
 #include "../LogSystem/Loggers/console_logger.h"
 #include "../LogSystem/Loggers/file_logger.h"
 
-
-class Game : public Observed
+template <class Rules>
+class Game
 {
 public:
     Game();
@@ -66,6 +68,8 @@ private:
     HeroMover *hMover;
     Drawer *drawer;
     Field *field;
+
+    Rules rules;
 };
 
 #endif // GAME_H

@@ -1,7 +1,8 @@
 #include "game.h"
 
-Game::Game()
-{       
+template <class Rules>
+Game<Rules>::Game()
+{
     initLogSystem();
     initField();
     initWindow();
@@ -9,7 +10,8 @@ Game::Game()
     initLogic();
 }
 
-Game::~Game()
+template <class Rules>
+Game<Rules>::~Game()
 {
     delete field;
     delete drawer;
@@ -18,7 +20,8 @@ Game::~Game()
     delete hMover;
 }
 
-void Game::run()
+template <class Rules>
+void Game<Rules>::run()
 {
     while (window->isOpen())
     {
@@ -28,12 +31,18 @@ void Game::run()
     }
 }
 
-void Game::initField()
+template <class Rules>
+void Game<Rules>::initField()
 {
-    FieldBuilder fbuilder;
+    FieldBuilder fbuilder(rules.heroStats,
+                          rules.enemiesCount,
+                          rules.slimeStats,
+                          rules.goblinStats,
+                          rules.trollStats,
+                          rules.itemsCount,
+                          rules.itemsStats);
     fbuilder.loadSampleFromFile(SAMPLE_PATH);
 
-    fbuilder.setDifficulty((Difficulty)DIFFICULTY);
     fbuilder.spawnEnemies();
     fbuilder.spawnItems();
     fbuilder.spawnHero();
@@ -41,7 +50,8 @@ void Game::initField()
     field = fbuilder.getResult();
 }
 
-void Game::initWindow()
+template <class Rules>
+void Game<Rules>::initWindow()
 {
     window = new sf::RenderWindow(sf::VideoMode(field->getWidth() * TILE_SIZE,
                                                 field->getHeight() * TILE_SIZE + FONT_SIZE),
@@ -49,7 +59,8 @@ void Game::initWindow()
                                   sf::Style::Close | sf::Style::Titlebar);
 }
 
-void Game::initDrawer()
+template <class Rules>
+void Game<Rules>::initDrawer()
 {
     drawer = new Drawer(field, sf::Vector2u(TILE_SIZE, TILE_SIZE));
     drawer->loadTileset(TILESET_PATH);
@@ -59,7 +70,8 @@ void Game::initDrawer()
     drawer->loadFont(FONT_PATH, FONT_SIZE);
 }
 
-void Game::initLogic()
+template <class Rules>
+void Game<Rules>::initLogic()
 {
     eMover = new EnemyMover(field);
     hMover = new HeroMover(field);
@@ -70,21 +82,22 @@ void Game::initLogic()
     gameOver = false;
 }
 
-void Game::initLogSystem()
+template <class Rules>
+void Game<Rules>::initLogSystem()
 {
     LoggerPool *loggerPool = LoggerPool::getInstance();
     loggerPool->pushLogger(new ConsoleLogger());
     loggerPool->pushLogger(new FileLogger());
 }
 
-void Game::updateEvents()
+template <class Rules>
+void Game<Rules>::updateEvents()
 {
     while (window->pollEvent(ev))
     {
         if (ev.type == sf::Event::Closed ||
             sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-                window->close();
-                obs.submit(this, GAME_INTERRUPTED);                
+                window->close();             
             }
         if (!movementMade && ev.type == sf::Event::KeyPressed) {
             auto hTile = field->heroTile;
@@ -106,7 +119,8 @@ void Game::updateEvents()
     }
 }
 
-void Game::updateLogic()
+template <class Rules>
+void Game<Rules>::updateLogic()
 {
     if (movementMade) {
         hMover->move(dir);
@@ -123,36 +137,38 @@ void Game::updateLogic()
     if (gameOver) window->close();
 }
 
-void Game::render()
+template <class Rules>
+void Game<Rules>::render()
 {
     window->clear(sf::Color(BG_COLOR));
     drawer->draw(*window);
     window->display();
 }
 
-void Game::checkHero()
+template <class Rules>
+void Game<Rules>::checkHero()
 {
     Hero *hero = dynamic_cast<Hero*>(field->heroTile->getEntity());
     if (hero->isDead()) {
         gameOver = true;
-        obs.submit(this, LogSignal::GAME_OVER);
     }
-    else if (missionCompleted && 
-             field->heroTile->getType() == EXIT) { 
-        // drawer->displayMessage();
+    else if (rules.winConditions.necessaryExit)
+        if (missionCompleted &&
+            field->heroTile->getType() == EXIT) { 
         gameOver = true;
-        obs.submit(hero, HERO_EXITED);
-        obs.submit(this, LogSignal::GAME_OVER);
     }
     changed = false; 
 }
 
-bool Game::isMissionCompleted()
+template <class Rules>
+bool Game<Rules>::isMissionCompleted()
 {
-    bool condition = field->enemyTiles.empty();
-    if (condition) {
-        missionCompleted = true; 
-        obs.submit(this, MISSION_COMPLETED);
+    if (rules.winConditions.allEnemiesMustBeBeaten) {
+        missionCompleted = field->enemyTiles.empty();
     }
-    return condition;
+    else {
+        missionCompleted = field->enemyTiles.size()/2;
+    }
+
+    return missionCompleted;
 }

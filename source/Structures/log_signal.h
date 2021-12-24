@@ -14,10 +14,7 @@ enum LogSignal {
     ENEMY_DEATH, 
     ITEM_CREATED,
     ITEM_USED,
-    FIGHT_STARTS,
-    MISSION_COMPLETED,
-    GAME_OVER,
-    GAME_INTERRUPTED
+    FIGHT_STARTS
 };
 
 #endif // LOG_EVENT_H

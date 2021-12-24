@@ -6,7 +6,7 @@
 class Slime : public Enemy
 {
 public:
-    Slime(size_t hp = 20, size_t dmg = 5);
+    Slime(size_t hp, size_t dmg);
 };
 
 #endif // SLIME_H

@@ -131,23 +131,6 @@ void Adapter::convert(Tile *tile, LogSignal ev)
     redirectToPool(osstr.str());
 }
 
-void Adapter::convert(Game* game, LogSignal ev) 
-{
-    std::ostringstream osstr;
-    if (ev == GAME_OVER)
-        osstr << "Game over";
-    else if (ev == MISSION_COMPLETED)
-        osstr << "Mission completed";
-    else if (ev == GAME_INTERRUPTED)
-        osstr << "Game was interrupted";
-    else {
-        std::cerr << ev << std::endl;
-        throw std::runtime_error("Wrong signal passed in adapter Game convert function");
-    }
-    redirectToPool(osstr.str());
-}
-
-
 void Adapter::redirectToPool(std::string data) const
 {
     LoggerPool *lp = LoggerPool::getInstance();

@@ -7,5 +7,4 @@ Goblin (HP=40 DMG=10) was created
 Goblin (HP=40 DMG=10) was created
 Troll (HP=60 DMG=15) was created
 Troll (HP=60 DMG=15) was created
-Hero (HP=100 DMG=13 ARMOR=0) was created
-Game was interrupted
+Hero (HP=100 DMG=10 ARMOR=4) was created

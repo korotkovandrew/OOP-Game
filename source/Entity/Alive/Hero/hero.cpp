@@ -1,10 +1,10 @@
 #include "hero.h"
 
 /* Constructors and Destructors */
-Hero::Hero(size_t hp, size_t dmg)
+Hero::Hero(size_t hp, size_t max_hp, size_t dmg, size_t armor)
     : Alive(hp, dmg),
-      maxHealth(hp),
-      armor(0) 
+      maxHealth(max_hp),
+      armor(armor) 
 {
     obs.submit(this, HERO_CREATED);
 }

@@ -6,7 +6,7 @@
 class Troll : public Enemy
 {
 public:
-    Troll(size_t hp = 60, size_t dmg = 15);
+    Troll(size_t hp, size_t dmg);
 };
 
 #endif // TROLL_H
