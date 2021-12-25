@@ -1,10 +1,22 @@
 #include "field_builder.h"
 
 /* Constructors and Destructors */
-FieldBuilder::FieldBuilder()
+FieldBuilder::FieldBuilder(HeroStats heroStats,
+                           EnemiesCount enemiesCount,
+                           EnemyStats slimeStats,
+                           EnemyStats goblinStats,
+                           EnemyStats trollStats,
+                           ItemsCount itemsCount,
+                           ItemsValues itemsValues)
     : target(new Field()),
-      difficulty(NORMAL),
-      loaded(false) {}
+      loaded(false),
+      heroStats(heroStats),
+      enemiesCount(enemiesCount),
+      slimeStats(slimeStats),
+      goblinStats(goblinStats),
+      trollStats(trollStats),
+      itemsCount(itemsCount),
+      itemsValues(itemsValues) {}
 
 /* Public Functions */
 void FieldBuilder::loadSampleFromFile(std::string fileName)
@@ -45,31 +57,26 @@ void FieldBuilder::loadSampleFromFile(std::string fileName)
     loaded = true;
 }
 
-void FieldBuilder::setDifficulty(Difficulty dif)
-{
-    difficulty = dif;
-}
-
 void FieldBuilder::spawnEnemies()
 {
     if (!loaded) 
         throw std::runtime_error("Tilemap must be loaded before spawning enemies");
 
     std::vector<Tile*> tiles = getFreeTiles();
-    size_t easyEnemies   = SLIMES(difficulty);
-    size_t normalEnemies = GOBLINS(difficulty);
-    size_t hardEnemies   = TROLLS(difficulty);
+    size_t lightEnemies  = enemiesCount.light;
+    size_t normalEnemies = enemiesCount.normal;
+    size_t hardEnemies   = enemiesCount.hard;
 
-    if (easyEnemies + normalEnemies + hardEnemies > tiles.size())
+    if (lightEnemies + normalEnemies + hardEnemies > tiles.size())
         throw std::runtime_error("Not enough space to spawn enemies");
 
     std::vector<Enemy *> enemies;
-    for (size_t i = 0; i < easyEnemies; i++)
-        enemies.push_back(new Slime);
+    for (size_t i = 0; i < lightEnemies; i++)
+        enemies.push_back(new Slime(slimeStats.health, slimeStats.damage));
     for (size_t i = 0; i < normalEnemies; i++)
-        enemies.push_back(new Goblin);
+        enemies.push_back(new Goblin(goblinStats.health, goblinStats.damage));
     for (size_t i = 0; i < hardEnemies; i++)
-        enemies.push_back(new Troll);
+        enemies.push_back(new Troll(trollStats.health, trollStats.damage));
 
 
     srand(time(0));
@@ -87,9 +94,9 @@ void FieldBuilder::spawnItems()
         throw std::runtime_error("Tilemap must be loaded before spawning items");
 
     std::vector<Tile*> tiles = getFreeTiles();
-    size_t healings  = HEALS(difficulty);
-    size_t damageUps = DAMAGEUPS(difficulty);
-    size_t armorUps  = ARMORUPS(difficulty);
+    size_t healings  = itemsCount.heal;
+    size_t damageUps = itemsCount.damageUp;
+    size_t armorUps  = itemsCount.armorUp;
     
     if (healings + damageUps + armorUps > tiles.size())
         throw std::runtime_error("Not enough space to spawn items");
@@ -97,11 +104,11 @@ void FieldBuilder::spawnItems()
     std::vector<Item *> items;
     
     for (size_t i = 0; i < healings; i++)
-        items.push_back(new Item(HEAL, HEAL_VALUE));
+        items.push_back(new Item(HEAL, itemsValues.heal));
     for (size_t i = 0; i < damageUps; i++)
-        items.push_back(new Item(DMG, DAMAGE_UP_VALUE));
+        items.push_back(new Item(DMG, itemsValues.damageUp));
     for (size_t i = 0; i < armorUps; i++)
-        items.push_back(new Item(ARMOR, ARMOR_UP_VALUE));
+        items.push_back(new Item(ARMOR, itemsValues.armorUp));
 
 
     srand(time(0));
@@ -118,7 +125,10 @@ void FieldBuilder::spawnHero()
     if (!loaded) 
         throw std::runtime_error("Tilemap must be loaded before spawning a hero");
 
-    Hero *hero = new Hero(HERO_HP(difficulty), HERO_DMG(difficulty));
+    Hero *hero = new Hero(heroStats.health, 
+                          heroStats.maxHealth,
+                          heroStats.damage,
+                          heroStats.armor);
 
     for (size_t x = 0; x < target->getWidth(); x++) {
         for (size_t y = 0; y < target->getHeight(); y++) {

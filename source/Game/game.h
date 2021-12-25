@@ -3,34 +3,43 @@
 
 #include <string>
 
+// SFML
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include "../Drawer/drawer.h"
 
+// SETTINGS
 #include "Rules/rules.h"
 #include "../../settings/config.h"
 
+// FIELD
 #include "../Field/field.h"
 #include "../Field/field_builder.h"
 
+// ENTITIES
 #include "../Entity/Alive/Enemy/Goblin/goblin.h"
 #include "../Entity/Alive/Enemy/Troll/troll.h"
 #include "../Entity/Alive/Enemy/Slime/slime.h"
 #include "../Entity/Alive/Hero/hero.h"
 #include "../Entity/Item/item.h"
 
+// MOVERS
 #include "../Movers/enemy_mover.h"
 #include "../Movers/hero_mover.h"
 
+// LOGGER
 #include "../Structures/log_signal.h"
 #include "../LogSystem/observed.h"
 #include "../LogSystem/logger_pool.h"
 #include "../LogSystem/Loggers/console_logger.h"
 #include "../LogSystem/Loggers/file_logger.h"
 
+// CONTROL
+#include "KeyAdapter/key_adapter.h"
 
-class Game : public Observed
+template <class Rules>
+class Game
 {
 public:
     Game();
@@ -39,8 +48,12 @@ public:
     void run();
 
 private:
+    void save(const char *filename);
+    bool load(const char *filename);
+    
     void initField();
     void initWindow();
+    void initControl();
     void initDrawer();
     void initLogic();
     void initLogSystem();
@@ -60,12 +73,15 @@ private:
     bool changed;
     bool missionCompleted;
     bool gameOver;
-    Direction dir;
+    EventReaction reaction;
 
     EnemyMover *eMover;
     HeroMover *hMover;
     Drawer *drawer;
     Field *field;
+    KeyAdapter *keyAdapter;
+
+    Rules rules;
 };
 
 #endif // GAME_H

@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "../Structures/direction.h"
+#include "../Structures/event_reaction.h"
 #include "../Tile/tile.h"
 
 class Field

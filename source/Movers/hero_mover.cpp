@@ -2,7 +2,7 @@
 
 HeroMover::HeroMover(Field *f) : field(f) {}
 
-void HeroMover::move(Direction dir)
+void HeroMover::move(EventReaction dir)
 {
     
     size_t x = field->heroTile->getX(), dx = 0;

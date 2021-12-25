@@ -6,7 +6,7 @@
 class Goblin : public Enemy
 {
 public:
-    Goblin(size_t hp = 40, size_t dmg = 10);
+    Goblin(size_t hp, size_t dmg);
 };
 
 #endif 

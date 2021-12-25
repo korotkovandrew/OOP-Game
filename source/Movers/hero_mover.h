@@ -12,7 +12,7 @@ class HeroMover : public Observed
 {
 public:
     HeroMover(Field *);
-    void move(Direction);
+    void move(EventReaction);
 private:
     Field *field;
 };

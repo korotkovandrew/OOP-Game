@@ -8,7 +8,7 @@
 class Hero : public Alive
 {
 public:
-    Hero(size_t hp = 100, size_t dmg = 10);
+    Hero(size_t hp, size_t max_hp, size_t dmg, size_t armor);
     void fight(Enemy &);
     void getHit(const Alive &);
 

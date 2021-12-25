@@ -13,23 +13,24 @@
 #include "../Entity/Alive/Enemy/Goblin/goblin.h"
 #include "../Entity/Alive/Enemy/Troll/troll.h"
 
-enum Difficulty {EASY, NORMAL, HARD};
+#include "../Structures/field_sample.h"
+#include "../Structures/rules_structures.h"
 
-typedef struct
-{
-    unsigned short *content;
-    size_t width;
-    size_t height; 
-} FieldSample;
+enum Difficulty {EASY, NORMAL, HARD};
 
 class FieldBuilder
 {
 public:
-    FieldBuilder();
+    FieldBuilder(HeroStats heroStats,
+                 EnemiesCount enemiesCount,
+                 EnemyStats slimeStats,
+                 EnemyStats goblinStats,
+                 EnemyStats trollStats,
+                 ItemsCount itemsCount,
+                 ItemsValues itemsValues);
 
     void loadSampleFromFile(std::string fileName);
 
-    void setDifficulty(Difficulty);
     void spawnEnemies();
     void spawnItems();
     void spawnHero();
@@ -40,8 +41,15 @@ private:
     std::vector<Tile*> getFreeTiles();
 
     bool loaded;
-    Difficulty difficulty;
     Field *target;
+
+    HeroStats heroStats;
+    EnemiesCount enemiesCount;
+    EnemyStats slimeStats;
+    EnemyStats goblinStats;
+    EnemyStats trollStats;
+    ItemsCount itemsCount;
+    ItemsValues itemsValues;
 };
 
 #endif // FIELD_BUILDER_H
