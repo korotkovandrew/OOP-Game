@@ -33,10 +33,10 @@ void Game<Rules>::run()
 }
 
 template <class Rules>
-void Game<Rules>::save()
+void Game<Rules>::save(const char *filename)
 {
     std::ofstream fout;
-    fout.open("../saves/save.txt", std::ofstream::trunc);
+    fout.open(filename, std::ofstream::trunc);
     if (!fout.is_open()) 
         throw std::runtime_error("Could not open the file to save the game");
 
@@ -114,10 +114,10 @@ void Game<Rules>::save()
 }
 
 template <class Rules>
-bool Game<Rules>::load()
+bool Game<Rules>::load(const char *filename)
 {
     std::ifstream fin;
-    fin.open("../saves/save.txt");
+    fin.open(filename);
     if (!fin.is_open())
         throw std::runtime_error("Could not open the file to load the game");
 
@@ -186,7 +186,6 @@ bool Game<Rules>::load()
         newField->enemyTiles.push_back(&newField->tiles[enemyX][enemyY]);
     }
 
-
     size_t itemsCount;
     if (!fin.read((char*)&itemsCount, sizeof(size_t))) return false;
 
@@ -213,6 +212,9 @@ bool Game<Rules>::load()
         newField->itemTiles.push_back(&newField->tiles[itemX][itemY]);
     }
 
+    if (fin.read(nullptr, sizeof(nullptr))) return false;
+    fin.close();
+
     delete field;
     delete drawer;
     delete eMover;
@@ -235,8 +237,6 @@ bool Game<Rules>::load()
     eMover = new EnemyMover(field);
     hMover = new HeroMover(field);
 
-    if (fin.read(nullptr, sizeof(nullptr))) return false;
-    fin.close();
     return true;
 }
 
@@ -320,18 +320,14 @@ void Game<Rules>::updateEvents()
             sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                 window->close();             
             }
-        if (ev.type == sf::Event::Closed ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-                window->close();             
-            }
         if (!movementMade && ev.type == sf::Event::KeyPressed) {
             reaction = keyAdapter->processKeyCode(ev.key.code);
             if (reaction == SAVE) {
-                save();
+                save("../saves/save.txt");
             }
             else if (reaction == LOAD) {
-                if (!load())
-                    throw std::runtime_error("Loading Failed. Save file is broken");
+                if (!load("../saves/save.txt"))
+                    std::cerr << "Loading Failed. Save file is broken";
             }
             else if (reaction != STOP) {
                 movementMade = true;

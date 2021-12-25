@@ -4,7 +4,6 @@
 #include "../../Structures/rules_structures.h"
 
 template<class Rules> class Game;
-class FieldBuilder;
 
 template <size_t HERO_HEALTH, size_t HERO_MAX_HEALTH, size_t HERO_DAMAGE, size_t HERO_ARMOR,
           size_t SLIME_COUNT, size_t GOBLIN_COUNT, size_t TROLL_COUNT, 

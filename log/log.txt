@@ -9,459 +9,370 @@ Troll (HP=60 DMG=15) was created
 Troll (HP=60 DMG=15) was created
 Hero (HP=100 DMG=10 ARMOR=4) was created
 Hero moves to tile (17, 1)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
-Goblin (HP=40 DMG=10) moves to tile (15, 3)
-Goblin (HP=40 DMG=10) moves to tile (8, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 6)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (16, 1)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (14, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (15, 1)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Goblin (HP=40 DMG=10) moves to tile (13, 3)
-Goblin (HP=40 DMG=10) moves to tile (8, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (14, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Goblin (HP=40 DMG=10) moves to tile (13, 4)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 10)
-Troll (HP=60 DMG=15) moves to tile (15, 16)
-Hero moves to tile (13, 1)
-Slime (HP=20 DMG=5) moves to tile (10, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Goblin (HP=40 DMG=10) moves to tile (13, 5)
-Goblin (HP=40 DMG=10) moves to tile (8, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 6)
-Troll (HP=60 DMG=15) moves to tile (6, 10)
-Troll (HP=60 DMG=15) moves to tile (14, 16)
-Hero moves to tile (12, 1)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Goblin (HP=40 DMG=10) moves to tile (13, 4)
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 14)
+Goblin (HP=40 DMG=10) moves to tile (8, 3)
 Goblin (HP=40 DMG=10) moves to tile (9, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 7)
-Troll (HP=60 DMG=15) moves to tile (5, 10)
-Troll (HP=60 DMG=15) moves to tile (13, 16)
-Hero moves to tile (11, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Goblin (HP=40 DMG=10) moves to tile (13, 3)
-Goblin (HP=40 DMG=10) moves to tile (9, 17)
-Goblin (HP=40 DMG=10) moves to tile (2, 6)
-Troll (HP=60 DMG=15) moves to tile (6, 10)
-Troll (HP=60 DMG=15) moves to tile (14, 16)
-Hero (HP=100 DMG=10 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (14, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (12, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (13, 1)
-Slime (HP=20 DMG=5) moves to tile (10, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Goblin (HP=40 DMG=10) moves to tile (11, 3)
+Goblin (HP=40 DMG=10) moves to tile (5, 12)
+Troll (HP=60 DMG=15) started to fight with hero
+Troll (HP=60 DMG=15) got hit by hero in fight
+Hero (HP=100 DMG=10 ARMOR=4) got hit by enemy in fight
+Troll (HP=50 DMG=15) got hit by hero in fight
+Hero (HP=89 DMG=10 ARMOR=4) got hit by enemy in fight
+Troll (HP=40 DMG=15) got hit by hero in fight
+Hero (HP=78 DMG=10 ARMOR=4) got hit by enemy in fight
+Troll (HP=30 DMG=15) got hit by hero in fight
+Hero (HP=67 DMG=10 ARMOR=4) got hit by enemy in fight
+Troll (HP=20 DMG=15) got hit by hero in fight
+Hero (HP=56 DMG=10 ARMOR=4) got hit by enemy in fight
+Troll (HP=10 DMG=15) got hit by hero in fight
+Troll (HP=0 DMG=15) was killed by hero
+Troll (HP=60 DMG=15) moves to tile (13, 9)
+Troll (HP=0 DMG=15) was killed by hero
+Troll (HP=0 DMG=15) started to fight with hero
+Troll (HP=0 DMG=15) got hit by hero in fight
+Troll (HP=0 DMG=15) was killed by hero
+Hero moves to tile (16, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 14)
+Goblin (HP=40 DMG=10) moves to tile (7, 3)
 Goblin (HP=40 DMG=10) moves to tile (8, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (12, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Goblin (HP=40 DMG=10) moves to tile (10, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (11, 1)
-Slime (HP=20 DMG=5) moves to tile (10, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Goblin (HP=40 DMG=10) moves to tile (9, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (10, 1)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (15, 16)
-Hero moves to tile (9, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Goblin (HP=40 DMG=10) moves to tile (7, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 10)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (8, 1)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (6, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 10)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Damage up item (3) was picked up by hero
-Hero moves to tile (7, 1)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
-Goblin (HP=40 DMG=10) moves to tile (7, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (5, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (7, 3)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
-Goblin (HP=40 DMG=10) started to fight with hero
-Goblin (HP=40 DMG=10) got hit by hero in fight
-Hero (HP=100 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=27 DMG=10) got hit by hero in fight
-Hero (HP=94 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=14 DMG=10) got hit by hero in fight
-Hero (HP=88 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=1 DMG=10) got hit by hero in fight
-Goblin (HP=0 DMG=10) was killed by hero
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 10)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Goblin (HP=0 DMG=10) was killed by hero
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Goblin (HP=40 DMG=10) started to fight with hero
-Goblin (HP=40 DMG=10) got hit by hero in fight
-Hero (HP=100 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=27 DMG=10) got hit by hero in fight
-Hero (HP=94 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=14 DMG=10) got hit by hero in fight
-Hero (HP=88 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=1 DMG=10) got hit by hero in fight
-Goblin (HP=0 DMG=10) was killed by hero
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Goblin (HP=0 DMG=10) was killed by hero
-Goblin (HP=0 DMG=10) started to fight with hero
-Goblin (HP=0 DMG=10) got hit by hero in fight
-Goblin (HP=0 DMG=10) was killed by hero
-Hero moves to tile (7, 3)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (16, 16)
-Goblin (HP=40 DMG=10) moves to tile (4, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (6, 1)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
+Goblin (HP=40 DMG=10) moves to tile (4, 12)
+Troll (HP=60 DMG=15) moves to tile (12, 9)
+Hero moves to tile (15, 1)
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (6, 14)
 Goblin (HP=40 DMG=10) moves to tile (7, 2)
 Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (6, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero movement to tile (6, 2) is blocked
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Slime (HP=20 DMG=5) moves to tile (16, 16)
+Goblin (HP=40 DMG=10) moves to tile (5, 12)
+Troll (HP=60 DMG=15) moves to tile (12, 10)
+Hero (HP=45 DMG=10 ARMOR=4) was created
+Slime (HP=20 DMG=5) was created
+Slime (HP=20 DMG=5) was created
+Slime (HP=20 DMG=5) was created
+Goblin (HP=40 DMG=10) was created
+Goblin (HP=40 DMG=10) was created
+Goblin (HP=40 DMG=10) was created
+Troll (HP=60 DMG=15) was created
+Hero moves to tile (16, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 14)
 Goblin (HP=40 DMG=10) moves to tile (7, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (7, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Hero movement to tile (6, 2) is blocked
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 13)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
+Goblin (HP=40 DMG=10) moves to tile (10, 18)
+Goblin (HP=40 DMG=10) moves to tile (6, 12)
+Troll (HP=60 DMG=15) moves to tile (13, 10)
+Hero moves to tile (15, 1)
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 14)
 Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (7, 18)
-Goblin (HP=40 DMG=10) moves to tile (8, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 10)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (7, 1)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (9, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (9, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (10, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 13)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
-Goblin (HP=40 DMG=10) moves to tile (10, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (10, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero moves to tile (7, 3)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (9, 3)
-Goblin (HP=40 DMG=10) moves to tile (6, 18)
-Goblin (HP=40 DMG=10) moves to tile (9, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (6, 1)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Goblin (HP=40 DMG=10) moves to tile (6, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero moves to tile (7, 1)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 10)
-Slime (HP=20 DMG=5) moves to tile (16, 16)
+Goblin (HP=40 DMG=10) moves to tile (11, 18)
+Goblin (HP=40 DMG=10) moves to tile (5, 12)
+Troll (HP=60 DMG=15) moves to tile (13, 11)
+Hero moves to tile (14, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 14)
 Goblin (HP=40 DMG=10) moves to tile (7, 3)
-Goblin (HP=40 DMG=10) moves to tile (4, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Slime (HP=20 DMG=5) moves to tile (15, 16)
+Goblin (HP=40 DMG=10) moves to tile (12, 18)
+Goblin (HP=40 DMG=10) moves to tile (6, 12)
+Troll (HP=60 DMG=15) moves to tile (13, 12)
+Hero movement to tile (14, 2) is blocked
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 14)
+Goblin (HP=40 DMG=10) moves to tile (7, 2)
+Goblin (HP=40 DMG=10) moves to tile (11, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 12)
+Troll (HP=60 DMG=15) moves to tile (12, 12)
+Hero moves to tile (15, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 10)
+Slime (HP=20 DMG=5) moves to tile (7, 14)
+Goblin (HP=40 DMG=10) moves to tile (7, 1)
+Goblin (HP=40 DMG=10) moves to tile (12, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (13, 12)
+Hero moves to tile (16, 1)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 14)
+Goblin (HP=40 DMG=10) moves to tile (6, 1)
+Goblin (HP=40 DMG=10) moves to tile (13, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (13, 11)
+Hero moves to tile (15, 1)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 14)
+Goblin (HP=40 DMG=10) moves to tile (5, 1)
+Goblin (HP=40 DMG=10) moves to tile (12, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (13, 12)
+Hero (HP=45 DMG=10 ARMOR=1688849860263940) was created
+Hero moves to tile (14, 1)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (12, 10)
+Slime (HP=20 DMG=5) moves to tile (10, 14)
+Goblin (HP=40 DMG=10) moves to tile (4, 1)
+Goblin (HP=40 DMG=10) moves to tile (11, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 12)
+Troll (HP=60 DMG=15) moves to tile (13, 11)
+Hero moves to tile (13, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (11, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 14)
+Goblin (HP=40 DMG=10) moves to tile (5, 1)
+Goblin (HP=40 DMG=10) moves to tile (10, 18)
+Goblin (HP=40 DMG=10) moves to tile (6, 12)
+Troll (HP=60 DMG=15) moves to tile (13, 10)
+Hero moves to tile (12, 1)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 10)
+Slime (HP=20 DMG=5) moves to tile (8, 14)
+Goblin (HP=40 DMG=10) moves to tile (6, 1)
+Goblin (HP=40 DMG=10) moves to tile (9, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 12)
+Troll (HP=60 DMG=15) moves to tile (14, 10)
+Hero moves to tile (11, 1)
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 14)
+Goblin (HP=40 DMG=10) moves to tile (5, 1)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (14, 9)
+Hero moves to tile (10, 1)
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (6, 14)
+Goblin (HP=40 DMG=10) moves to tile (6, 1)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (13, 9)
+Hero moves to tile (9, 1)
+Slime (HP=20 DMG=5) moves to tile (2, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (5, 14)
+Goblin (HP=40 DMG=10) moves to tile (7, 1)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (12, 9)
+Hero moves to tile (8, 1)
+Slime (HP=20 DMG=5) moves to tile (2, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (4, 14)
 Goblin (HP=40 DMG=10) started to fight with hero
 Goblin (HP=40 DMG=10) got hit by hero in fight
-Hero (HP=100 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=27 DMG=10) got hit by hero in fight
-Hero (HP=94 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=14 DMG=10) got hit by hero in fight
-Hero (HP=88 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=1 DMG=10) got hit by hero in fight
+Hero (HP=45 DMG=10 ARMOR=4) got hit by enemy in fight
+Goblin (HP=30 DMG=10) got hit by hero in fight
+Hero (HP=39 DMG=10 ARMOR=4) got hit by enemy in fight
+Goblin (HP=20 DMG=10) got hit by hero in fight
+Hero (HP=33 DMG=10 ARMOR=4) got hit by enemy in fight
+Goblin (HP=10 DMG=10) got hit by hero in fight
 Goblin (HP=0 DMG=10) was killed by hero
-Goblin (HP=40 DMG=10) moves to tile (3, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (11, 9)
 Goblin (HP=0 DMG=10) was killed by hero
 Goblin (HP=0 DMG=10) started to fight with hero
 Goblin (HP=0 DMG=10) got hit by hero in fight
 Goblin (HP=0 DMG=10) was killed by hero
+Hero moves to tile (7, 1)
+Slime (HP=20 DMG=5) moves to tile (2, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (5, 14)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (6, 14)
+Troll (HP=60 DMG=15) moves to tile (12, 9)
+Hero (HP=45 DMG=10 ARMOR=1688849860263940) was created
+Hero moves to tile (7, 2)
+Slime (HP=20 DMG=5) moves to tile (3, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 10)
+Slime (HP=20 DMG=5) moves to tile (5, 15)
+Goblin (HP=40 DMG=10) moves to tile (9, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (11, 9)
 Hero moves to tile (7, 3)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) moves to tile (2, 18)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (15, 16)
-Hero moves to tile (6, 3)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 13)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Goblin (HP=40 DMG=10) moves to tile (3, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (14, 16)
-Hero moves to tile (5, 3)
-Slime (HP=20 DMG=5) moves to tile (11, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 12)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Goblin (HP=40 DMG=10) moves to tile (3, 17)
-Goblin (HP=40 DMG=10) moves to tile (3, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 9)
-Troll (HP=60 DMG=15) moves to tile (15, 16)
-Hero moves to tile (4, 3)
-Slime (HP=20 DMG=5) moves to tile (10, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 13)
-Slime (HP=20 DMG=5) moves to tile (13, 16)
-Goblin (HP=40 DMG=10) moves to tile (3, 18)
-Goblin (HP=40 DMG=10) moves to tile (2, 5)
-Troll (HP=60 DMG=15) moves to tile (5, 10)
-Troll (HP=60 DMG=15) moves to tile (16, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
+Slime (HP=20 DMG=5) moves to tile (4, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 9)
+Slime (HP=20 DMG=5) moves to tile (5, 14)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (8, 14)
+Troll (HP=60 DMG=15) moves to tile (11, 10)
+Hero moves to tile (8, 3)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (10, 10)
+Slime (HP=20 DMG=5) moves to tile (6, 14)
+Goblin (HP=40 DMG=10) moves to tile (9, 18)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (11, 9)
+Healing item (50) was picked up by hero
+Hero moves to tile (9, 3)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 10)
+Slime (HP=20 DMG=5) moves to tile (5, 14)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (6, 14)
+Troll (HP=60 DMG=15) moves to tile (10, 9)
+Hero moves to tile (10, 3)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (5, 15)
+Goblin (HP=40 DMG=10) moves to tile (9, 18)
+Goblin (HP=40 DMG=10) moves to tile (5, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 9)
+Hero moves to tile (11, 3)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (5, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (6, 14)
+Troll (HP=60 DMG=15) moves to tile (8, 9)
+Hero moves to tile (12, 3)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (6, 10)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 9)
+Hero moves to tile (13, 3)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (8, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (9, 10)
+Hero moves to tile (13, 4)
+Slime (HP=20 DMG=5) moves to tile (6, 10)
+Slime (HP=20 DMG=5) moves to tile (7, 9)
+Slime (HP=20 DMG=5) moves to tile (2, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 11)
+Hero moves to tile (13, 5)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 9)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (10, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (9, 10)
+Hero (HP=45 DMG=10 ARMOR=1688849860263940) was created
+Hero moves to tile (12, 5)
+Slime (HP=20 DMG=5) moves to tile (7, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 12)
+Troll (HP=60 DMG=15) moves to tile (9, 11)
+Hero moves to tile (11, 5)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 10)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (10, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (9, 12)
+Hero moves to tile (10, 5)
+Slime (HP=20 DMG=5) moves to tile (6, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (2, 16)
+Goblin (HP=40 DMG=10) moves to tile (11, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (10, 12)
+Hero moves to tile (10, 6)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 10)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (10, 16)
+Goblin (HP=40 DMG=10) moves to tile (8, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 12)
+Hero moves to tile (10, 7)
+Slime (HP=20 DMG=5) moves to tile (7, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 9)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 11)
+Hero moves to tile (11, 7)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 9)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (10, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 13)
+Troll (HP=60 DMG=15) moves to tile (9, 10)
+Hero moves to tile (12, 7)
+Slime (HP=20 DMG=5) moves to tile (5, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (2, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 14)
+Troll (HP=60 DMG=15) moves to tile (10, 10)
+Armor item (4) was picked up by hero
+Hero moves to tile (13, 7)
+Slime (HP=20 DMG=5) moves to tile (6, 9)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (6, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 10)
+Damage up item (3) was picked up by hero
+Hero moves to tile (14, 7)
+Slime (HP=20 DMG=5) moves to tile (7, 9)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (5, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 11)
+Hero moves to tile (13, 7)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (8, 9)
+Slime (HP=20 DMG=5) moves to tile (5, 16)
+Goblin (HP=40 DMG=10) moves to tile (8, 16)
+Goblin (HP=40 DMG=10) moves to tile (6, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 10)
+Hero moves to tile (12, 7)
+Slime (HP=20 DMG=5) moves to tile (6, 10)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (7, 16)
+Goblin (HP=40 DMG=10) moves to tile (5, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 9)
+Hero moves to tile (11, 7)
+Slime (HP=20 DMG=5) moves to tile (7, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 10)
+Slime (HP=20 DMG=5) moves to tile (5, 16)
+Goblin (HP=40 DMG=10) moves to tile (8, 16)
+Goblin (HP=40 DMG=10) moves to tile (4, 14)
+Troll (HP=60 DMG=15) moves to tile (8, 9)
+Hero moves to tile (10, 7)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (10, 10)
+Slime (HP=20 DMG=5) moves to tile (4, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (5, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 9)
+Hero moves to tile (9, 7)
+Slime (HP=20 DMG=5) moves to tile (8, 9)
+Slime (HP=20 DMG=5) moves to tile (9, 10)
+Slime (HP=20 DMG=5) moves to tile (3, 16)
+Goblin (HP=40 DMG=10) moves to tile (9, 17)
+Goblin (HP=40 DMG=10) moves to tile (4, 14)
+Troll (HP=60 DMG=15) moves to tile (10, 9)
+Hero moves to tile (8, 7)
+Slime (HP=20 DMG=5) moves to tile (8, 10)
+Slime (HP=20 DMG=5) moves to tile (9, 11)
+Slime (HP=20 DMG=5) moves to tile (3, 17)
+Goblin (HP=40 DMG=10) moves to tile (9, 16)
+Goblin (HP=40 DMG=10) moves to tile (5, 14)
+Troll (HP=60 DMG=15) moves to tile (9, 9)
+Hero (HP=77 DMG=13 ARMOR=8) was created
 Slime (HP=20 DMG=5) was created
 Slime (HP=20 DMG=5) was created
 Slime (HP=20 DMG=5) was created
 Goblin (HP=40 DMG=10) was created
 Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Goblin (HP=40 DMG=10) moves to tile (6, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (12, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 11)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Goblin (HP=40 DMG=10) started to fight with hero
-Goblin (HP=40 DMG=10) got hit by hero in fight
-Hero (HP=100 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=27 DMG=10) got hit by hero in fight
-Hero (HP=94 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=14 DMG=10) got hit by hero in fight
-Hero (HP=88 DMG=13 ARMOR=4) got hit by enemy in fight
-Goblin (HP=1 DMG=10) got hit by hero in fight
-Goblin (HP=0 DMG=10) was killed by hero
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (4, 5)
-Troll (HP=60 DMG=15) moves to tile (4, 9)
-Troll (HP=60 DMG=15) moves to tile (15, 16)
-Goblin (HP=0 DMG=10) was killed by hero
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (6, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (6, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
-Troll (HP=60 DMG=15) was created
-Hero moves to tile (7, 2)
-Slime (HP=20 DMG=5) moves to tile (14, 16)
-Slime (HP=20 DMG=5) moves to tile (2, 9)
-Goblin (HP=40 DMG=10) moves to tile (8, 3)
-Goblin (HP=40 DMG=10) moves to tile (5, 18)
-Goblin (HP=40 DMG=10) moves to tile (6, 5)
-Troll (HP=60 DMG=15) moves to tile (6, 9)
-Troll (HP=60 DMG=15) moves to tile (17, 16)
-Hero (HP=100 DMG=13 ARMOR=4) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Slime (HP=20 DMG=5) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Goblin (HP=40 DMG=10) was created
-Troll (HP=60 DMG=15) was created
 Troll (HP=60 DMG=15) was created

@@ -48,8 +48,8 @@ public:
     void run();
 
 private:
-    void save();
-    bool load();
+    void save(const char *filename);
+    bool load(const char *filename);
     
     void initField();
     void initWindow();
