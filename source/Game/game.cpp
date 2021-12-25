@@ -244,6 +244,12 @@ template <class Rules>
 void Game<Rules>::initControl()
 {
     keyAdapter = new KeyAdapter();
+    keyAdapter->setControlKeyBinding(sf::Keyboard::Up,
+                                     sf::Keyboard::Down,
+                                     sf::Keyboard::Left,
+                                     sf::Keyboard::Right,
+                                     sf::Keyboard::Num1,
+                                     sf::Keyboard::Num2);
 }
 
 template <class Rules>

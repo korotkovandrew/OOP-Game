@@ -1,26 +1,39 @@
 #include "key_adapter.h"
 
+KeyAdapter::KeyAdapter()
+    : moveUp(sf::Keyboard::W),
+      moveDown(sf::Keyboard::S),
+      moveLeft(sf::Keyboard::A),
+      moveRight(sf::Keyboard::D) {}
+
 EventReaction KeyAdapter::processKeyCode(sf::Keyboard::Key keyCode)
 {
-    if (keyCode == sf::Keyboard::P) {
+    if (keyCode == moveUp)
+        return UP;
+    else if (keyCode == moveDown)
+        return DOWN;
+    else if (keyCode == moveLeft)
+        return LEFT;
+    else if (keyCode == moveRight)
+        return RIGHT;
+    else if (keyCode == save)
         return SAVE;
-    }
-    else if (keyCode == sf::Keyboard::L) {
+    else if (keyCode == load)
         return LOAD;
-    }
-    else if (keyCode == sf::Keyboard::W || 
-        keyCode == sf::Keyboard::S || 
-        keyCode == sf::Keyboard::A || 
-        keyCode == sf::Keyboard::D) 
-    {
-        if (keyCode == sf::Keyboard::W)
-            return UP;
-        else if (keyCode == sf::Keyboard::S)
-            return DOWN;
-        else if (keyCode == sf::Keyboard::A) 
-            return LEFT;
-        else if (keyCode == sf::Keyboard::D) 
-            return RIGHT;
-    }
-    return STOP;
+    else return STOP;
+}
+
+void KeyAdapter::setControlKeyBinding(sf::Keyboard::Key moveUpKey,
+                                      sf::Keyboard::Key moveDownKey,
+                                      sf::Keyboard::Key moveLeftKey,
+                                      sf::Keyboard::Key moveRightKey,
+                                      sf::Keyboard::Key saveKey,
+                                      sf::Keyboard::Key loadKey)
+{
+    moveUp    = moveUpKey;
+    moveDown  = moveDownKey;
+    moveLeft  = moveLeftKey;
+    moveRight = moveRightKey;
+    save      = saveKey;
+    load      = loadKey;
 }
