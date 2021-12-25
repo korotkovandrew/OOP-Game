@@ -8,8 +8,14 @@
 
 class KeyAdapter
 {
-public:   
+public:
+    KeyAdapter();
     EventReaction processKeyCode(sf::Keyboard::Key keyCode);
+    void setControlKeyBinding(sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key, sf::Keyboard::Key);
+    sf::Keyboard::Key moveLeft;
+    sf::Keyboard::Key moveRight;
+    sf::Keyboard::Key moveUp;
+    sf::Keyboard::Key moveDown;
 };
 
 #endif // KEY_ADAPTER_H
